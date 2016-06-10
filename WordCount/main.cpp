@@ -24,6 +24,7 @@
 
 using namespace std;
 using namespace boost::algorithm;
+using namespace boost;
 
 
 using google::sparse_hash_map;
