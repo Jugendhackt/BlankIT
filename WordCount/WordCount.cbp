@@ -23,6 +23,7 @@
 				<Linker>
 					<Add option="-lmysqlcppconn -pthread -Wl,--no-as-needed -ldl" />
 					<Add library="/usr/lib/libboost_regex.a" />
+					<Add library="/usr/lib/libboost.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
