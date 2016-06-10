@@ -13,17 +13,14 @@
 				<Option compiler="gcc" />
 				<Option projectCompilerOptionsRelation="2" />
 				<Compiler>
-					<Add option="-march=corei7" />
 					<Add option="-O3" />
 					<Add option="-std=c++11" />
-					<Add option="-lboost" />
 					<Add directory="include" />
 					<Add directory="/usr/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-lmysqlcppconn -pthread -Wl,--no-as-needed -ldl" />
+					<Add option="-lmysqlcppconn -lboost_regex -pthread -Wl,--no-as-needed -ldl" />
 					<Add library="/usr/lib/libboost_regex.a" />
-					<Add library="/usr/lib/libboost.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
