@@ -40,10 +40,10 @@ int main(int argc, char *argv[])
 {
     ///Create-Statements in Code!
 
-    /*driver = get_driver_instance();
-    con = driver->connect("tcp://127.0.0.1:3306", "root", "2371998");
-    con->setSchema("WC_test");
-    sql::Statement *stmt = con->createStatement();
+    driver = get_driver_instance();
+    con = driver->connect("tcp://127.0.0.1:3306", "jh", "");
+    con->setSchema("WC");
+    /*sql::Statement *stmt = con->createStatement();
     stmt->execute("SET collation_connection = 'latin1_general_cs'");
     delete stmt;*/
 

@@ -14,6 +14,7 @@
 				<Option projectCompilerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-O3" />
+					<Add option="-w" />
 					<Add option="-std=c++11" />
 					<Add directory="include" />
 					<Add directory="/usr/include" />

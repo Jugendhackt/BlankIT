@@ -23,125 +23,66 @@ int WordCount::readFile(string text)
     strs.clear();
     wcount.clear();
     locworte.clear();
-    string full = text;
+    string ful = text;
 
-    std::regex re1("[\?!;,\()\"\':]|(?<![0-9])[.]");
-    full = std::regex_replace(full, re1, " $& ");
-    std::regex re2("[ ]+");
-    full = std::regex_replace(full, re2, " ");
-    std::regex re3("([\[][\[])(.*?)([]][]])");
-    full = std::regex_replace(full, re3, "$&$2\n");
+    vector<string> tete;
+    boost::algorithm::split_regex(tete,ful,boost::regex("[[][[].*?[]][]]"));
+    cout<<tete.size()<<endl;
+    for(string fu : tete){
+        vector<vector<string>> lstrs;
+        cout<<fu.length()<<endl;
+
+        boost::regex re1("[\?!;,\()\"\':]|(?<![0-9])[.]");
+        string full = boost::regex_replace(fu, re1, " $& ");
+        boost::regex re2("[ ]+");
+        full = boost::regex_replace(full, re2, " ");
+        boost::regex re3("([\[][\[])(.*?)([]][]])");
+        full = boost::regex_replace(full, re3, "$&$2\n");
 
 
-    vector<vector<string>> ret;
-    vector<string> tem;
-    boost::algorithm::split_regex(tem,full,boost::regex("(?<![0-9])[.]|[!?\n\r]"));
-    for(unsigned int j = 0; j<tem.size(); j++)
-    {
-        vector<string> tem2;
-        boost::algorithm::split(tem2,tem[j],is_any_of(" \n\r"));
-        ret.push_back(tem2);
-    }
-    strs.push_back(ret);
-
-    ///leere Wörter löschen
-    for(unsigned int l = 0; l<strs.size(); l++)
-    {
-        for(unsigned int k = 0; k<strs[l].size(); k++)
+        vector<string> tem;
+        boost::algorithm::split_regex(tem,full,boost::regex("(?<![0-9])[.]|[!?\n\r]"));
+        for(unsigned int j = 0; j<tem.size(); j++)
         {
-            for(unsigned int j = 0; j<strs[l][k].size(); j++)
+            vector<string> tem2;
+            boost::algorithm::split(tem2,tem[j],is_any_of(" \n\r"));
+            lstrs.push_back(tem2);
+        }
+
+        ///leere Wörter löschen
+            for(unsigned int k = 0; k<lstrs.size(); k++)
             {
-                if(strs[l][k][j].length()<=0)
+                for(unsigned int j = 0; j<lstrs[k].size(); j++)
                 {
-                    strs[l][k].erase(strs[l][k].begin()+j);
-                    j--;
+                    if(lstrs[k][j].length()<=0)
+                    {
+                        lstrs[k].erase(lstrs[k].begin()+j);
+                        j--;
+                    }
+                }
+                if(lstrs[k].size()==0)
+                {
+                    lstrs.erase(lstrs.begin()+k);
+                    k--;
                 }
             }
-            if(strs[l][k].size()==0)
+
+        ///Wörter zählen
+            for(unsigned int j = 0; j<lstrs.size(); j++)
             {
-                strs[l].erase(strs[l].begin()+k);
-                k--;
+                for(unsigned int k = 0; k<lstrs[j].size(); k++)
+                {
+                    wcount[lstrs[j][k]]++;
+                }
             }
-        }
-        if(strs[l].size()==0)
-        {
-            strs.erase(strs.begin()+l);
-            l--;
-        }
+        cout<<"lstrs.size()"<<lstrs.size()<<endl;
+        strs.push_back(lstrs);
     }
+    cout<<"strs.size()"<<strs.size()<<endl;
 
-    ///Wörter zählen
-    for(unsigned int i = 0; i<strs.size(); i++)
-    {
-        for(unsigned int j = 0; j<strs[i].size(); j++)
-        {
-            for(unsigned int k = 0; k<strs[i][j].size(); k++)
-            {
-                wcount[strs[i][j][k]]++;
-            }
-        }
-    }
-
-    sql::PreparedStatement *dictIns = con->prepareStatement("INSERT IGNORE INTO dict(Wort) VALUES(?);");
-    for(auto t = wcount.begin(); t!=wcount.end(); ++t)
-    {
-        if(t->first.length()>0)
-        {
-            dictIns->setString(1,t->first);
-            dictIns->execute();
-        }
-    }
-    delete dictIns;
-    sql::PreparedStatement *textIns = con->prepareStatement("INSERT IGNORE INTO text(Titel, Text) VALUES(?,?);");
-    sql::PreparedStatement *getId = con->prepareStatement("SELECT TID,Titel FROM text WHERE Titel=?");
-
-    string tit="";
-    unsigned int anz = 0;
-    for(unsigned int j = 0; j<strs[0][0].size(); j++)
-    {
-        if(j!=strs[0][0].size()-1)
-        {
-            tit+=strs[0][0][j];
-            tit+=" ";
-            anz++;
-        }
-        else
-        {
-            tit+=strs[0][0][j];
-        }
-    }
-    if(tit.length()>anz)
-    {
-        textIns->setString(1,tit);
-        textIns->setString(2,full);
-        textIns->execute();
-    }
-    getId->setString(1,tit);
-    sql::ResultSet *res = getId->executeQuery();
-    while(res->next())
-    {
-        TID=res->getInt("TID");
-    }
-    delete res;
-
-    delete textIns;
-    delete getId;
-    sql::PreparedStatement *dictGet = con->prepareStatement("SELECT ID,Wort FROM dict WHERE Wort=?");
-    for(auto t = wcount.begin(); t!=wcount.end(); ++t)
-    {
-        dictGet->setString(1,t->first);
-        sql::ResultSet *res = dictGet->executeQuery();
-        while(res->next())
-        {
-            globDictI[res->getInt("ID")]=res->getString("Wort");
-            globDictS[res->getString("Wort")]=res->getInt("ID");
-        }
-        delete res;
-    }
-    delete dictGet;
     return 0;
 }
-
+/*
 int WordCount::procData()
 {
     for(auto t = wcount.begin(); t!=wcount.end(); ++t)
@@ -334,4 +275,4 @@ int WordCount::storeData()
         cout<<"glw"<<endl;
     }
     return 0;
-}
+}*/

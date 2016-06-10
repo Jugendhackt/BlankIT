@@ -20,6 +20,7 @@
 
 using namespace std;
 using namespace boost::algorithm;
+using namespace boost;
 
 
 using google::sparse_hash_map;
@@ -32,7 +33,7 @@ public:
     sparse_hash_map<unsigned int,string> globDictI;
     sparse_hash_map<string,unsigned int> globDictS;
     unsigned int TID;
-    vector<vector<vector<string>>> strs;
+    vector<vector<vector<string>>> strs;//[text][satz][wort]
     sparse_hash_map<string,unsigned int> wcount;
     sparse_hash_map<string,Wort> locworte;
     sql::Connection *con;
