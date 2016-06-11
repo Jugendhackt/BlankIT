@@ -1,0 +1,187 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
+public class Main 
+{
+	public static String DBIP = "127.0.0.1";
+	public static void main(String[] args)
+	{
+		int Cnt = 1;
+		if (args.length > 0)
+			Cnt = Integer.parseInt(args[0]);
+		if (args.length > 1)
+			DBIP = args[1];
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
+		String satz = "";
+		
+		int add;
+		try{
+			while ((add = br.read()) != -1)
+			{
+				satz += (char)add;
+				if (satz.contains("[@24]"))
+					break;
+			}
+		}catch (Exception ex) {Debug.Error("Error in input stream");}
+		
+		satz = satz.replace("[@24]", "");
+		satz = SanitizeString(satz);
+		List<String> sentences = SplitText(satz);
+		Map<String, Float> sentenceSort = new TreeMap<String, Float>();
+		for (int i = 0; i < sentences.size(); i++)
+		{
+			float value = CalculateSentenceValue(sentences.get(i));
+			sentenceSort.put(sentences.get(i), value);
+			Debug.Log("ADD: " + sentences.get(i) + "[" + value + "]");
+			//Map<Integer, String> sentenceSort = new TreeMap<Integer, String>();		
+		}
+//		sentenceSort = sortByValue(sentenceSort);
+		Debug.Log(""+sentenceSort.size());
+		
+		StringBuilder ret = new StringBuilder();
+		for (int i = 0; i < Cnt && i < sentenceSort.size(); i++)
+			ret.append(sentenceSort.keySet().toArray()[1] 
+					+ ": " + sentenceSort.get(sentenceSort.keySet().toArray()[1]) + "\n");
+		System.out.println("OUT: " + ret.toString());
+	}
+	
+	public static String SanitizeString(String sentence)
+	{
+//		sentence = sentence.replace(". ", ".");
+//		sentence = sentence.replace("! ", "!");
+//		sentence = sentence.replace("? ", "?");
+		return sentence;
+	}
+	
+	public static List<String> SplitText(String sentence)
+	{
+		List<String> ret = new ArrayList<String>();
+		String[] add = sentence.split("(?<![0-9])[.]|[!?\n\r]");
+		for (int i = 0; i < add.length; i++)
+			ret.add(add[i] + (i == add.length - 1 ? "" : "."));
+		return ret;
+	}
+	
+	public static float CalculateSentenceValue(String sentence)
+	{
+		Connection conn = GetDBConnection();
+		
+		String[] words = SplitSentence(sentence);
+		
+		long sum = 0;
+		int nounC = 0;
+		for (String word : words)
+			if (IsWordNoun(conn, word))
+			{
+				nounC++;
+				sum += GetWordCount(conn, word);
+			}
+		
+	
+		return (nounC > 1 ? sum/nounC : -1f);
+	}
+	
+	public static String[] SplitSentence(String sentence)
+	{
+//		sentence = sentence.replace("  ", " ");
+		
+		String[] ret = sentence.split(" ");
+		return ret;
+	}
+	
+	public static <K, V extends Comparable<? super V>> Map<K, V> 
+    sortByValue( Map<K, V> map )
+	{
+	    List<Map.Entry<K, V>> list =
+	        new LinkedList<Map.Entry<K, V>>( map.entrySet() );
+	    Collections.sort( list, new Comparator<Map.Entry<K, V>>()
+	    {
+	        public int compare( Map.Entry<K, V> o1, Map.Entry<K, V> o2 )
+	        {
+	            return (o1.getValue()).compareTo( o2.getValue() );
+	        }
+	    } );
+	
+	    Map<K, V> result = new LinkedHashMap<K, V>();
+	    for (Map.Entry<K, V> entry : list)
+	    {
+	        result.put( entry.getKey(), entry.getValue() );
+	    }
+	    return result;
+	}
+	
+	public static boolean IsWordNoun(Connection conn, String word)
+	{
+		try
+		{
+//			Debug.Log("Checking... " + word);
+			PreparedStatement stmt = conn.prepareStatement(
+					"SELECT COUNT(*) AS count FROM Nomen WHERE Wort=?");
+			stmt.setString(1, word);
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			rs.next();
+			return rs.getInt("count") == 1;
+		} catch (SQLException e) {
+			Debug.Error("Hier bin ich!!! FEHLER FEHLER!! \n\n" + 
+			e.getMessage() + "\n\n" + e.getStackTrace());
+		}
+		return false;
+	}
+	
+	public static int GetWordCount(Connection conn, String word)
+	{
+		try
+		{
+			PreparedStatement stmt = conn.prepareStatement(
+				"SELECT sum(anz) AS count FROM woAnz WHERE Wort=?");
+			stmt.setString(1, word);
+			ResultSet rs = stmt.executeQuery();
+
+			rs.next();
+			return rs.getInt("count");
+		} catch (SQLException e) {
+			Debug.Error("Hier bin ich!!! FEHLER FEHLER!! \n\n" + 
+			e.getMessage() + "\n\n" + e.getStackTrace());
+		}
+		return -1;
+	}
+	
+	public static Connection GetDBConnection()
+	{
+		MysqlDataSource dataSource = new MysqlDataSource();
+		dataSource.setUser("jh");
+		dataSource.setPassword("");
+		dataSource.setDatabaseName("WC");
+		//dataSource.setPort("3306");
+		dataSource.setServerName(DBIP);
+		Connection conn;
+		try {
+			conn = dataSource.getConnection();
+			conn.createStatement().executeQuery("SET collation_connection = 'latin1_general_cs'");
+			return conn;
+			
+		} catch (SQLException e) {
+			Debug.Error("Hier bin ich!!! FEHLER FEHLER!! \n\n" + 
+			e.getMessage() + "\n\n" + e.getStackTrace());
+		}
+		return null;
+	}
+}
