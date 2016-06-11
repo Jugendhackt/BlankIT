@@ -2,6 +2,13 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    /*background-image:url(http://www.zastavki.com/pictures/1920x1200/2010/Archive_Miscellaneous_Private_Library_025201_.jpg);*/
+}
+
+footer {
+    margin-bottom: 10pt;
+    position: fixed;
+
 }
 
 /* Wrapping element */
@@ -19,7 +26,6 @@ body {
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
-input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="tel"],
@@ -28,7 +34,7 @@ input[type="select"] {
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
     .jumbotron {
         margin-top: 20px;
     }
