@@ -3,12 +3,6 @@
 WordCount::WordCount( sql::Connection* c )
 {
     con = c;
-    //locworte.set_empty_key("%%%-leer-%%%");
-    locworte.set_deleted_key( "%%%-gelöscht-%%%" );
-    //globDictS.set_empty_key("%%%-leer-%%%");
-    globDictS.set_deleted_key( "%%%-gelöscht-%%%" );
-    //globDictI.set_empty_key(4294967294);
-    globDictI.set_deleted_key( 4294967295 );
 }
 
 WordCount::~WordCount()
@@ -76,6 +70,17 @@ int WordCount::readFile( string text )
     return 0;
 }
 
+string makeSentence(vector<string> sen){
+    string ret = "";
+    for(size_t i = 0;i<sen.size(); i++){
+        ret+=sen[i];
+        ret+=" ";
+    }
+    ret=ret.substr(0,ret.length()-1);
+    ret+=".";
+    return ret;
+}
+
 int WordCount::procData()
 {
     sql::Statement* stmt = con->createStatement();
@@ -93,173 +98,69 @@ int WordCount::procData()
     while( res->next() )
         si = res->getUInt( "count(*)" );
 
+    double mid = ( double )su / ( double )si;
+    cout << mid << endl;
+    sparse_hash_map<string,unsigned int> wos;
 
-    cout<<su/si<<endl;
-
-    return 0;
-}
-int WordCount::storeData()
-{
-    unsigned int counter = 0;
-
-    for( auto i = locworte.begin(); i != locworte.end(); ++i )
+    for( unsigned int l = 0; l < strs.size(); l++ )
     {
-        counter++;
-        cout << endl << counter << "/" << locworte.size() << endl;
-        sql::PreparedStatement* pstmt = con->prepareStatement( "INSERT INTO `oiS` VALUES(?,?,?) ON DUPLICATE KEY UPDATE anz=anz+VALUES(anz);" );
-        sql::PreparedStatement* pstmt2 = con->prepareStatement( "INSERT INTO `oiS2` VALUES(?,?,?) ON DUPLICATE KEY UPDATE anz=anz+VALUES(anz);" );
-
-        for( auto t = ( ( i->second ).oftInSatz ).begin(); t != ( i->second ).oftInSatz.end(); ++t )
+        for( unsigned int k = 0; k < strs[l].size(); k++ )
         {
-            if( ( i->second ).WID > t->first )
+            for( unsigned int j = 0; j < strs[l][k].size(); j++ )
             {
-                pstmt->setInt( 1, ( i->second ).WID );
-                pstmt->setInt( 2, t->first );
-                pstmt->setInt( 3, t->second );
-                pstmt->execute();
-                pstmt2->setInt( 2, ( i->second ).WID );
-                pstmt2->setInt( 1, t->first );
-                pstmt2->setInt( 3, t->second );
-                pstmt2->execute();
-            }
-            else
-            {
-                pstmt->setInt( 2, ( i->second ).WID );
-                pstmt->setInt( 1, t->first );
-                pstmt->setInt( 3, t->second );
-                pstmt->execute();
-                pstmt2->setInt( 1, ( i->second ).WID );
-                pstmt2->setInt( 2, t->first );
-                pstmt2->setInt( 3, t->second );
-                pstmt2->execute();
-            }
-
-        }
-
-        delete pstmt;
-        delete pstmt2;
-        cout << "oiS" << endl;
-        pstmt = con->prepareStatement( "INSERT INTO `oiDV` VALUES(?,?,?) ON DUPLICATE KEY UPDATE anz=anz+VALUES(anz);" );
-        pstmt2 = con->prepareStatement( "INSERT INTO `oiDV2` VALUES(?,?,?) ON DUPLICATE KEY UPDATE anz=anz+VALUES(anz);" );
-
-        for( auto t = ( ( i->second ).oftInDirV ).begin(); t != ( i->second ).oftInDirV.end(); ++t )
-        {
-            if( ( i->second ).WID > t->first )
-            {
-                pstmt->setInt( 1, ( i->second ).WID );
-                pstmt->setInt( 2, t->first );
-                pstmt->setInt( 3, t->second );
-                pstmt->execute();
-                pstmt2->setInt( 2, ( i->second ).WID );
-                pstmt2->setInt( 1, t->first );
-                pstmt2->setInt( 3, t->second );
-                pstmt2->execute();
-            }
-            else
-            {
-                pstmt->setInt( 2, ( i->second ).WID );
-                pstmt->setInt( 1, t->first );
-                pstmt->setInt( 3, t->second );
-                pstmt->execute();
-                pstmt2->setInt( 1, ( i->second ).WID );
-                pstmt2->setInt( 2, t->first );
-                pstmt2->setInt( 3, t->second );
-                pstmt2->execute();
+                wos[strs[l][k][j]]=0;
             }
         }
-
-        delete pstmt;
-        delete pstmt2;
-        cout << "oiDV" << endl;
-        pstmt = con->prepareStatement( "INSERT INTO `oiDH` VALUES(?,?,?) ON DUPLICATE KEY UPDATE anz=anz+VALUES(anz);" );
-        pstmt2 = con->prepareStatement( "INSERT INTO `oiDH2` VALUES(?,?,?) ON DUPLICATE KEY UPDATE anz=anz+VALUES(anz);" );
-
-        for( auto t = ( ( i->second ).oftInDirH ).begin(); t != ( i->second ).oftInDirH.end(); ++t )
-        {
-            if( ( i->second ).WID > t->first )
-            {
-                pstmt->setInt( 1, ( i->second ).WID );
-                pstmt->setInt( 2, t->first );
-                pstmt->setInt( 3, t->second );
-                pstmt->execute();
-                pstmt2->setInt( 2, ( i->second ).WID );
-                pstmt2->setInt( 1, t->first );
-                pstmt2->setInt( 3, t->second );
-                pstmt2->execute();
-            }
-            else
-            {
-                pstmt->setInt( 2, ( i->second ).WID );
-                pstmt->setInt( 1, t->first );
-                pstmt->setInt( 3, t->second );
-                pstmt->execute();
-                pstmt2->setInt( 1, ( i->second ).WID );
-                pstmt2->setInt( 2, t->first );
-                pstmt2->setInt( 3, t->second );
-                pstmt2->execute();
-            }
-        }
-
-        delete pstmt;
-        delete pstmt2;
-        cout << "oiDH" << endl;
-        pstmt = con->prepareStatement( "INSERT INTO oiT VALUES(?,?,?) ON DUPLICATE KEY UPDATE anz=anz+VALUES(anz);" );
-
-        for( auto t = ( ( i->second ).oftInText ).begin(); t != ( i->second ).oftInText.end(); ++t )
-        {
-            pstmt->setInt( 1, ( i->second ).WID );
-            pstmt->setInt( 2, t->first );
-            pstmt->setInt( 3, t->second );
-            pstmt->execute();
-        }
-
-        delete pstmt;
-        cout << "oiT" << endl;
-        pstmt = con->prepareStatement( "INSERT INTO worte VALUES(?,?) ON DUPLICATE KEY UPDATE anz=anz+VALUES(anz);" );
-        pstmt->setInt( 1, ( i->second ).WID );
-        pstmt->setInt( 2, ( i->second ).c );
-        pstmt->execute();
-        delete pstmt;
-        cout << "worte" << endl;
-        pstmt = con->prepareStatement( "INSERT INTO flags VALUES(?,?,?) ON DUPLICATE KEY UPDATE anz=anz+VALUES(anz);" );
-
-        for( auto t = ( ( i->second ).flags ).begin(); t != ( i->second ).flags.end(); ++t )
-        {
-            pstmt->setInt( 1, ( i->second ).WID );
-            pstmt->setString( 2, t->first );
-            pstmt->setInt( 3, t->second );
-            pstmt->execute();
-        }
-
-        delete pstmt;
-        cout << "flags" << endl;
-        pstmt = con->prepareStatement( "INSERT INTO attr VALUES(?,?,?) ON DUPLICATE KEY UPDATE val=VALUES(val);" );
-
-        for( auto t = ( ( i->second ).attr ).begin(); t != ( i->second ).attr.end(); ++t )
-        {
-            pstmt->setInt( 1, ( i->second ).WID );
-            pstmt->setString( 2, t->first );
-            pstmt->setInt( 3, t->second );
-            pstmt->execute();
-        }
-
-        delete pstmt;
-        cout << "attr" << endl;
-        pstmt = con->prepareStatement( "INSERT IGNORE INTO glw VALUES(?,?);" );
-
-        for( auto t = ( ( i->second ).glW ).begin(); t != ( i->second ).glW.end(); ++t )
-        {
-            if( t->second == true )
-            {
-                pstmt->setInt( 1, ( i->second ).WID );
-                pstmt->setInt( 2, t->first );
-                pstmt->execute();
-            }
-        }
-
-        delete pstmt;
-        cout << "glw" << endl;
     }
+    cout<<wos.size()<<endl;
+
+    sql::PreparedStatement *loadAnz = con->prepareStatement("select D.ID,D.Wort,W.anz from dict as D join worte as W on D.ID=W.ID AND D.Wort = ?;");
+    for(auto t = wos.begin(); t!=wos.end(); ++t)
+    {
+        loadAnz->setString(1,t->first);
+        sql::ResultSet *res = loadAnz->executeQuery();
+
+        while(res->next())
+        {
+            wos[t->first]=res->getUInt("anz");
+            //if(res->getUInt("anz")<=mid)
+                //cout<<t->first<<"  "<<res->getUInt("anz")<<endl;
+        }
+        delete res;
+    }
+    delete loadAnz;
+    unsigned int c1=0;
+    unsigned int c2=0;
+    for( unsigned int l = 0; l < strs.size(); l++ )
+    {
+        for( unsigned int k = 0; k < strs[l].size(); k++ )
+        {
+            unsigned int counter = 0;
+            for( unsigned int j = 0; j < strs[l][k].size(); j++ )
+            {
+                if(wos[strs[l][k][j]]<=mid*0.5){
+                    counter++;
+                }
+            }
+            if(strs[l][k].size()>3&&(double)counter/(double)strs[l][k].size()>0.25 && (double)counter/(double)strs[l][k].size()<0.75){
+                string s = makeSentence(strs[l][k]);
+                if(s.find("=")==std::string::npos
+                   && s.find("*")==std::string::npos
+                   && s.find(")")==std::string::npos
+                   && s.find("(")==std::string::npos
+                   && s.find(":")==std::string::npos
+                   && s.find("/")==std::string::npos)
+                    cout<<s<<endl;
+                //cout<<l<<"  "<<k<<" "<<counter<<"/"<<strs[l][k].size()<<endl;
+                c2++;
+            }
+            c1++;
+        }
+    }
+    cout<<c2<<"/"<<c1<<endl;
+
+    //"select D.ID,D.Wort,W.anz from dict as D join worte as W on D.ID=W.ID where D.Wort IN();"
+
 
     return 0;
 }

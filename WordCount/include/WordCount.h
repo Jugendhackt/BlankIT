@@ -7,6 +7,7 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/algorithm/string/regex.hpp>
 #include <google/sparse_hash_map>
+#include <google/sparse_hash_set>
 #include <regex>
 #include <Wort.h>
 
@@ -24,21 +25,17 @@ using namespace boost;
 
 
 using google::sparse_hash_map;
+using google::sparse_hash_set;
 
 class WordCount {
     public:
         WordCount( sql::Connection* c );
         virtual ~WordCount();
-        sparse_hash_map<unsigned int, string> globDictI;
-        sparse_hash_map<string, unsigned int> globDictS;
         unsigned int TID;
         vector<vector<vector<string>>> strs;//[text][satz][wort]
-        sparse_hash_map<string, unsigned int> wcount;
-        sparse_hash_map<string, Wort> locworte;
         sql::Connection* con;
         int readFile( string text );
         int procData();
-        int storeData();
     protected:
     private:
 };

@@ -6984,16 +6984,17 @@
 1457302878 source:/home/dvs23/projects/WordCount/src/WordCount.cpp
 	"WordCount.h"
 
-1465632927 source:/home/dvs23/projects/autoquiz/WordCount/src/WordCount.cpp
+1465636961 source:/home/dvs23/projects/autoquiz/WordCount/src/WordCount.cpp
 	"WordCount.h"
 
-1465626043 /home/dvs23/projects/autoquiz/WordCount/include/WordCount.h
+1465633937 /home/dvs23/projects/autoquiz/WordCount/include/WordCount.h
 	<iostream>
 	<fstream>
 	<boost/regex.hpp>
 	<boost/algorithm/string.hpp>
 	<boost/algorithm/string/regex.hpp>
 	<google/sparse_hash_map>
+	<google/sparse_hash_set>
 	<regex>
 	<Wort.h>
 	"mysql_connection.h"
@@ -7008,7 +7009,7 @@
 1465626043 source:/home/dvs23/projects/autoquiz/WordCount/src/Wort.cpp
 	"Wort.h"
 
-1465632953 source:/home/dvs23/projects/autoquiz/WordCount/main.cpp
+1465634802 source:/home/dvs23/projects/autoquiz/WordCount/main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -7030,4 +7031,16 @@
 	<cppconn/exception.h>
 	<cppconn/statement.h>
 	<cppconn/prepared_statement.h>
+
+1460014107 /usr/include/google/sparse_hash_set
+	<sparsehash/sparse_hash_set>
+
+1460014107 /usr/include/sparsehash/sparse_hash_set
+	<sparsehash/internal/sparseconfig.h>
+	<algorithm>
+	<functional>
+	<memory>
+	<utility>
+	<sparsehash/internal/libc_allocator_with_realloc.h>
+	<sparsehash/internal/sparsehashtable.h>
 
