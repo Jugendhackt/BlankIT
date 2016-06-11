@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace autoquiz {
+namespace WebUI {
     
     
     public partial class ViewSwitcher {
