@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace autoquiz {
+namespace WebUI {
     
     
     public partial class SiteMaster {
