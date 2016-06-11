@@ -66,8 +66,6 @@ public class Main
 			} catch (IOException e) {
 				Debug.Error("Invalid input stream!");
 			}
-			if (satz.contains("[@24]"))
-				run = false;
 	//		Debug.Log(satz);
 			List<Word> words = AnalyseSentence(satz);
 	//		for (int i = 0; i < words.size(); i++)
