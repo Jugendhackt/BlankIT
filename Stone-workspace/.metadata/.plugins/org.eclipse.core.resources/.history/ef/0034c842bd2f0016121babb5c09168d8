@@ -1,0 +1,17 @@
+
+public class Main 
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Hello world!");
+		
+		String sentence = "Hallo, ich bin ein Nomen!";
+	}
+	
+	public static String[] SplitSentence(String sentence)
+	{
+		sentence = sentence.replace("  ", " ");
+		
+		String[] ret = sentence.split(" ");
+	}
+}
