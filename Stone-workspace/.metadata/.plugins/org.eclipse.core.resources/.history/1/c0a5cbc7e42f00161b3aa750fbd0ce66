@@ -56,13 +56,11 @@ public class Main
 		
 //		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
 //		String satz = "Hallo, ich bin eine Kuh."; 
-
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
-		String satz = "#WAITING_FOR_INPUT";
-		
 		boolean run = true;
 		while (run)
 		{
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
+			String satz = "#WAITING_FOR_INPUT";
 			try {
 				satz = br.readLine();
 			} catch (IOException e) {
