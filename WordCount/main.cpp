@@ -17,6 +17,7 @@ sql::Statement* stmt;
 
 int main( int argc, char* argv[] )
 {
+    srand( time( NULL ) );
     driver = get_driver_instance();
     con = driver->connect( "tcp://127.0.0.1:3306", "jh", "" );
     con->setSchema( "WC" );
@@ -39,7 +40,11 @@ int main( int argc, char* argv[] )
 
     WordCount wc( con );
     wc.readFile( full );
-    wc.procData();
+
+    if( argc == 2 )//if a max number of sentences is given -> use it -> if it is a string atoi returns 0
+        wc.procData( atoi( argv[1] ) );
+    else//if there is no max given, print all (0)
+        wc.procData( 0 );
 
     return 0;
 }

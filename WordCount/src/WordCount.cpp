@@ -68,24 +68,27 @@ string makeSentence( vector<string> sen )
     return ret;
 }
 
-int WordCount::procData()
+int WordCount::procData( unsigned int maxi )
 {
+    //get how often a german word exists in Wikipedia DE in median
     sql::Statement* stmt = con->createStatement();
 
-    sql::ResultSet* res = stmt->executeQuery( "select sum(anz) from Nomen;" );
-    unsigned int su = 0;
+    sql::ResultSet* res = stmt->executeQuery( "select sum(anz) from Nomen;" );//get sum of number of words
+    unsigned int su = 0;//save the sum
 
     while( res->next() )
         su = res->getUInt( "sum(anz)" );
 
     delete res;
-    res = stmt->executeQuery( "select count(*) from Nomen;" );
-    unsigned int si = 0;
+    res = stmt->executeQuery( "select count(*) from Nomen;" );//get the total amount of different words
+    unsigned int si = 0;//save the amount
 
     while( res->next() )
         si = res->getUInt( "count(*)" );
 
-    double mid = ( double )su / ( double )si;
+    double mid = ( double )su / ( double )si;//save the median
+
+
     sparse_hash_map<string, unsigned int> wos;
 
     for( unsigned int l = 0; l < strs.size(); l++ )
@@ -111,8 +114,8 @@ int WordCount::procData()
     }
 
     delete loadAnz;
-    unsigned int c1 = 0;
-    unsigned int c2 = 0;
+
+    vector<string> validSen;//valid sentences to choose from
 
     for( unsigned int l = 0; l < strs.size(); l++ )
     {
@@ -126,22 +129,33 @@ int WordCount::procData()
                     counter++;
             }
 
-            if( strs[l][k].size() > 3 && ( double )counter / ( double )strs[l][k].size() > 0.25 && ( double )counter / ( double )strs[l][k].size() < 0.75 )
+            if( strs[l][k].size() > 3 )//&& ( double )counter / ( double )strs[l][k].size() > 0.25 && ( double )counter / ( double )strs[l][k].size() < 0.75
             {
                 string s = makeSentence( strs[l][k] );
 
                 if( !boost::regex_match( s.c_str(), boost::regex( ".*?[=*)(:\\]\\[/0-9]+.*?|^[^A-Z].*?" ) ) )
-                {
-                    c2++;
-                    cout << s << endl;
-                }
+                    validSen.push_back( s );
             }
-
-            c1++;
         }
     }
 
-    cout << "[@24]" << endl;
+    sparse_hash_set<unsigned int> usedSen;//sentences already printed to console
+
+    if( maxi == 0 )//if maxi is 0, all sentences will be printed
+        maxi = validSen.size();
+
+    while( usedSen.size() < maxi && usedSen.size() < validSen.size() ) //print sentences until the max number is reached or all sentences have been printed
+    {
+        unsigned int ra = rand() % validSen.size();//random number as index for sentence
+
+        if( usedSen.find( ra ) == usedSen.end() ) //if index has already been used, don't use it again, try another number
+        {
+            cout << validSen[ra] << endl;//print sentence
+            usedSen.insert( ra ); //remember that index has been used
+        }
+    }
+
+    cout << "[@24]" << endl;//mark text end for FindBlank.jar
 
     return 0;
 }
