@@ -6,9 +6,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using autoquiz.Models;
+using WebUI.Models;
 
-namespace autoquiz.Models
+namespace WebUI.Models
 {
     // Sie können Benutzerdaten für den Benutzer durch Hinzufügen weiterer Eigenschaften zur User-Klasse hinzufügen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=317594".
     public class ApplicationUser : IdentityUser
@@ -42,7 +42,7 @@ namespace autoquiz.Models
 }
 
 #region Hilfsprogramme
-namespace autoquiz
+namespace WebUI
 {
     public static class IdentityHelper
     {

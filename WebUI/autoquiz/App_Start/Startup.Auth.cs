@@ -7,9 +7,9 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using autoquiz.Models;
+using WebUI.Models;
 
-namespace autoquiz
+namespace WebUI
 {
     public partial class Startup {
 
