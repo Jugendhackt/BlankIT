@@ -40,14 +40,11 @@ public class Main
 		Debug.Log("Init!");
 		Debug.Seperator();
 		
-		//int quatschafaktor = 1;		
+		int quatschafaktor = 1;		
 		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
 		
 		List<Word> words = AnalyseSentence(satz);
-		
-		for (int i = 0; i < words.size(); i++)
-			Debug.Log(words.get(i).word + "   Noun: " + words.get(i).Noun 
-					+ "   Frequency: " + words.get(i).frequency);
+		//List<>
 //		String sentence = "Hallo, ich bin ein Noun!";
 //		String[] parts = SplitSentence(sentence);
 //		

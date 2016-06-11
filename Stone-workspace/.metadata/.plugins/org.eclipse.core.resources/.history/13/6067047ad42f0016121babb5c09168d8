@@ -40,7 +40,7 @@ public class Main
 		Debug.Log("Init!");
 		Debug.Seperator();
 		
-		//int quatschafaktor = 1;		
+		int quatschafaktor = 1;		
 		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
 		
 		List<Word> words = AnalyseSentence(satz);
