@@ -20,7 +20,7 @@ public class Main
 {
 	public static String DBIP = "127.0.0.1";
 	public static void main(String[] args)
-	{
+	{		
 		int Cnt = 1;
 		if (args.length > 0)
 			Cnt = Integer.parseInt(args[0]);
@@ -39,6 +39,9 @@ public class Main
 					break;
 			}
 		}catch (Exception ex) {Debug.Error("Error in input stream");}
+
+
+		Connection conn = GetDBConnection();
 		
 		satz = satz.replace("[@24]", "");
 		satz = SanitizeString(satz);
@@ -46,7 +49,7 @@ public class Main
 		Map<String, Float> sentenceSort = new TreeMap<String, Float>();
 		for (int i = 0; i < sentences.size(); i++)
 		{
-			float value = CalculateSentenceValue(sentences.get(i));
+			float value = CalculateSentenceValue(conn, sentences.get(i));
 			sentenceSort.put(sentences.get(i), value);
 //			Debug.Log("ADD: " + sentences.get(i) + "[" + value + "]");
 			//Map<Integer, String> sentenceSort = new TreeMap<Integer, String>();		
@@ -77,10 +80,8 @@ public class Main
 		return ret;
 	}
 	
-	public static float CalculateSentenceValue(String sentence)
-	{
-		Connection conn = GetDBConnection();
-		
+	public static float CalculateSentenceValue(Connection conn, String sentence)
+	{		
 		String[] words = SplitSentence(sentence);
 		
 		long sum = 0;
