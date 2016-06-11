@@ -6984,7 +6984,7 @@
 1457302878 source:/home/dvs23/projects/WordCount/src/WordCount.cpp
 	"WordCount.h"
 
-1465641954 source:/home/dvs23/projects/autoquiz/WordCount/src/WordCount.cpp
+1465644942 source:/home/dvs23/projects/autoquiz/WordCount/src/WordCount.cpp
 	"WordCount.h"
 
 1465633937 /home/dvs23/projects/autoquiz/WordCount/include/WordCount.h
@@ -7009,7 +7009,7 @@
 1465626043 source:/home/dvs23/projects/autoquiz/WordCount/src/Wort.cpp
 	"Wort.h"
 
-1465641977 source:/home/dvs23/projects/autoquiz/WordCount/main.cpp
+1465642827 source:/home/dvs23/projects/autoquiz/WordCount/main.cpp
 	<iostream>
 	<fstream>
 	<string>
