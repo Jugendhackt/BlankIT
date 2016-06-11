@@ -57,11 +57,9 @@ public class Main
 		
 //		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
 //		String satz = "Hallo, ich bin eine Kuh."; 
-		int Fq = 1;
-		if (args.length > 0)
-			Fq = Integer.parseInt(args[0]);
+		
 		if (args.length > 1)
-			DBIP = args[1];
+			DBIP = args[0];
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
 		String satz = "#WAITING_FOR_INPUT";
@@ -81,7 +79,7 @@ public class Main
 	//		for (int i = 0; i < words.size(); i++)
 	//			Debug.Log(words.get(i).word + "   Noun: " + words.get(i).Noun 
 	//			+ "   Frequency: " + words.get(i).frequency);
-			String ret = StripOutAndConcat(words, Fq);
+			String ret = StripOutAndConcat(words, Integer.parseInt(args[0]));
 			if (ret != null)
 			System.out.println(ret + "[@23]"); /* RETURN TO CLIENT */
 		}

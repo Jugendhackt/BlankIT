@@ -61,7 +61,7 @@ public class Main
 		if (args.length > 0)
 			Fq = Integer.parseInt(args[0]);
 		if (args.length > 1)
-			DBIP = args[1];
+			DBIP = args[0];
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
 		String satz = "#WAITING_FOR_INPUT";
