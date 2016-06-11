@@ -1,0 +1,247 @@
+[[Beton]]
+
+Querschnitt durch Beton
+Betonverarbeitung auf einer Baustelle
+Links noch eingeschalter Stahlbeton, rechts der bereits erhärtete Beton im fertigen Zustand.
+Flug durch einen µCT-Bildstapel eines Stückes Beton, gefunden am Strand von Montpellier, Frankreich. Durch langen Salzwasser-Kontakt haben sich die Calcium-basierten Füllstoffe (Muschel- und Schneckenschalen) aufgelöst und Lufteinschlüsse hinterlassen.
+
+Beton [] (österr. und z.T. bayr. [], schweiz. []; vom gleichbedeutenden franz. Wort béton) ist ein Baustoff, hergestellt als ein Gemisch aus einem Bindemittel und einer Gesteinskörnung.
+
+Für den künstlich hergestellten Stein kommt in der Regel das Bindemittel Zement zum Einsatz. Die Gesteinskörnung (früher Zuschlag) setzt sich üblicherweise aus Kies und Sand zusammen. Zugabewasser (früher Anmachwasser) führt dazu, dass das Bindemittel chemisch reagiert, dabei erhärtet und ein festes, disperses Baustoffgemisch entsteht. Das Wasser wird bei diesem Prozess zum größten Teil chemisch gebunden. Frischer Beton trocknet deshalb nicht während der Erhärtung, sondern benötigt Wasser zum Abbinden, um seine Festigkeit zu entwickeln.
+Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten, die die Eigenschaften des Baustoffs gezielt beeinflussen.
+
+Beton wird in modernen Anwendungen oft nicht allein, sondern als Hauptbestandteil eines Verbundwerkstoffs eingesetzt. In Verbindung mit Betonstahl oder Spannstahl kann Stahlbeton bzw. Spannbeton hergestellt werden. Durch die Zugabe von Stahl-, Kunststoff- oder Glasfasern lässt sich ein Faserbeton herstellen. Bei Einsatz von textiltechnischen Gewirken aus AR Glas (alkaliresistent) oder Carbon als nichtkorrodierende Bewehrung spricht man von Textilbeton. 
+
+== Grundlegende Eigenschaften und Verwendung ==
+Der Baustoff Beton zeichnet sich besonders durch seine Druckfestigkeit aus. Im Bauwesen als Konstruktionsbaustoff verwendeter Beton hat üblicherweise mindestens eine Druckfestigkeit von 20 Newton pro Quadratmillimeter (N/mm²). Das entspricht in etwa der Gewichtskraft einer Masse von 200 Kilogramm auf einen Quadratzentimeter. Beton mit geringerer Festigkeit wird meist nur als Behelfsmaterial, z. B. für Sauberkeitsschichten oder Verfüllungen, verwendet. Moderne Hochleistungsbetone hingegen erreichen mittlerweile Festigkeiten von über 150 N/mm². Alle Betone gemeinsam haben, dass sie Zugspannungen nur in geringem Umfang aufnehmen können. Für die meistens eingesetzten Normalbetone gilt die Faustformel, dass die Zugfestigkeit ca. 10 % der Druckfestigkeit beträgt. Beton wird daher in der Regel als Stahlbeton hergestellt, indem Bewehrungsstahl in Form von Stäben oder Matten in den Bereichen eingelegt wird, in denen bei Belastung mit Zugspannungen zu rechnen ist. Die Ummantelung des Stahls mit Beton ist zudem in mehrfacher Hinsicht vorteilhaft: Zum einen schützt der hohe pH-Wert des Betons den Stahl vor Korrosion. Zum anderen wird der Stahl im Brandfall nicht direkt einer hohen Temperaturentwicklung ausgesetzt und behält dadurch länger seine Festigkeit, als ungeschützter Stahl.
+
+Stahlbeton wird heutzutage in vielen Bereichen eingesetzt. Beim Bau von Häusern meist für Decken, Stützen und Ringanker, bei größeren Gebäuden oft auch für Wände und Gründungen. Der Bau von Hochhäusern, Tunneln, Brücken, Stützwänden usw. ist gänzlich ohne Beton meist nicht möglich.
+
+Unbewehrter Beton wird immer dann verwendet, wenn überwiegend Druck und keine großen Zugspannungen auftreten können. Das sind meist Kellerwände, kleinere Fundamente und Bodenplatten, aber begünstigt durch ihre gebogene Form auch Staumauern. Weitere Einsatzgebiete sind vorgefertigte Elemente wie Blocksteine für den Mauerwerksbau oder Waschbetonplatten. Auf Grund der geringen Kosten, der beliebigen Formbarkeit und einer vergleichsweise hohen Dichte von ca. 2,4 Tonnen pro Kubikmeter (t/m³) wird Beton z. B. auch für Gegengewichte an Kränen oder als Wellenbrecher verwendet.
+
+Beton weist zudem zwei zeitabhängige Eigenschaften auf, die in Abhängigkeit von der genauen Zusammensetzung mehr oder weniger stark ausgeprägt sein können. Beim Schwinden verringert sich das Volumen eines Bauteils durch Austrocknung und chemische Vorgänge. Kriechen tritt bei allen belasteten Bauteilen auf und bezeichnet die mit der Zeit zunehmende Verformung, trotz gleichbleibender Belastung.
+
+== Unterscheidungsmerkmale ==
+Beton lässt sich anhand verschiedenster Merkmale unterscheiden. Gebräuchlich sind Unterscheidungen anhand
+* der Trockenrohdichte in Leichtbeton, Normalbeton und Schwerbeton,
+* der Festigkeit, wobei die Druckfestigkeit die wichtigste Rolle einnimmt,
+* dem Ort der Herstellung in Baustellen- oder Transportbeton, 
+* dem Verwendungszweck in beispielsweise wasserundurchlässigen Beton, Unterwasserbeton,
+* dem Erhärtungszustand in Frisch- und Festbeton,
+* der Konsistenz in Klassen von steif bis (sehr) fließfähig,
+* der Art der Verdichtung in Rüttelbeton, Stampfbeton, Walzbeton, Fließbeton, Spritzbeton, … ,
+* der Art der Gesteinskörnung in Sandbeton, Kiesbeton, Splittbeton, … .
+
+Wichtig ist dabei die Abgrenzung des Betons vom Mörtel. Mörtel ist ein Gemisch aus einem Bindemittel, wie z. B. Zement und feiner Gesteinskörnung, die per Definition höchstens 4 mm im Durchmesser aufweisen darf. Beton ist hingegen ein Gemisch aus Mörtel und gröberer Gesteinskörnung.
+
+== Geschichte ==
+Kuppel des Pantheons in Rom von innen
+Dauerhafter Kalkmörtel als Bindemittel konnte schon an 10.000 Jahre alten Bauwerksresten in der heutigen Türkei nachgewiesen werden. Gebrannter Kalk wurde von den Ägyptern beim Bau der Pyramiden verwendet.
+
+Die Römer entwickelten das opus caementitium (opus = Werk, Bauwerk; caementitium = Zuschlagstoff, Bruchstein), aus dessen Namen das Wort Zement abgeleitet ist. Dieser Baustoff, auch als römischer Beton oder Kalkbeton bezeichnet, bestand aus gebranntem Kalk, Wasser und Sand, dem mortar (Mörtel), gemischt mit Ziegelmehl, und zeichnete sich durch eine hohe Druckfestigkeit aus. Damit wurden unter anderem die Aquädukte und die Kuppel des Pantheons in Rom hergestellt, die einen Durchmesser von 43 Metern hat und bis heute erhalten ist.
+
+Eine wesentliche Verbesserung, die von den Römern entwickelt wurde, war die Verwendung inerter Zuschlagsstoffe, die hauptsächlich aus Resten von gebranntem Ziegelmaterial bestanden und die Eigenschaft besitzen, bei Temperaturänderungen keine Risse zu bilden. Dies kann noch heute an Orten in Nordafrika (z. B. Leptis Magna, Kyrene) beobachtet werden, wo es große Estrichflächen gibt, die etwa um 200–300 n. Chr. ausgeführt wurden und die trotz großer Temperaturdifferenzen zwischen Tag und Nacht noch heute völlig frei von Rissen sind.
+
+Das Wort Beton ist übernommen aus gleichbedeutendem französisch béton, dieses aus altfranzösisch betun (Mörtel, Zement), abgeleitet von lateinisch bitumen (schlammiger Sand, Erdharz, Bergteer, Kitt). Wortbedeutung und Etymologie (französisch) Bernard de Bélidor beschreibt die Herstellung und Verwendung von Beton in seinem Standardwerk „Architecture hydraulique“ (Bd. 2, Paris 1753). Das Wort erscheint dann auch in der deutschen Übersetzung „Architectura hydraulica“ (Bd. 2, Augsburg 1769).
+
+Die Entwicklung des Betons in der Neuzeit begann 1755 mit dem Engländer John Smeaton. Dieser führte, auf der Suche nach einem wasserbeständigen Mörtel, Versuche mit gebrannten Kalken und Tonen durch und stellte fest, dass für einen selbsterhärtenden (hydraulischen) Kalk ein bestimmter Anteil an Ton notwendig ist.
+
+Drei Erfindungen leiteten letztlich den modernen Betonbau ein:
+* Die des Romanzements 1796 durch den Engländer J. Parker,
+* die des künstlichen hydraulischen Kalks durch Louis-Joseph Vicat 1818 sowie
+* die des Portlandzements durch Joseph Aspdin im Jahr 1824.
+
+Ein weiterer großer Entwicklungssprung war die Erfindung des Stahlbetons durch Joseph Monier (Patent: 1867). Deshalb wird der Bewehrungsstahl oder Betonstahl auch heute noch gelegentlich als Moniereisen bezeichnet.
+
+Beton wird in der zeitgenössischen Kunst auch für Denkmäler oder Skulpturen verarbeitet. Exotisch ist die Verwendung im Schiffbau (zum Beispiel in einem Betonschiff).
+
+== Frischbeton ==
+Als Frischbeton wird der noch nicht erhärtete Beton bezeichnet. Der Zementleim, also das Gemisch aus Wasser, Zement und weiteren feinkörnigen Bestandteilen ist noch nicht abgebunden. Dadurch ist der Frischbeton noch verarbeitbar, das heißt formbar und zum Teil fließbar. Während des Abbindens des Zementleims wird der Beton als junger Beton oder grüner Beton bezeichnet. Nachdem der Zementleim abgebunden hat, wird der Beton Festbeton genannt.
+
+=== Bestandteile und Zusammensetzung ===
+Die Zusammensetzung eines Betons wird vor der industriellen Herstellung in einer Betonrezeptur festgelegt, die durch Erfahrungswerte und Versuche erstellt wird. Die Zusammensetzung richtet sich unter anderem nach der gewünschten Festigkeitsklasse, den Umweltbedingungen denen das spätere Bauteil ausgesetzt sein wird, der gewünschten Verarbeitbarkeit und ggf. auch nach architektonischen Gesichtspunkten, wie z. B. der Farbgebung. Dementsprechend wird je nach Anwendungsfall Zement, Wasser, Gesteinskörnung, Betonzusatzstoffe und Betonzusatzmittel in einem bestimmten Verhältnis vermischt.
+
+Bei der nicht-industriellen Herstellung, überwiegend beim Heimwerken, wird Beton auch anhand einfacher Faustformeln gemischt. Eine solche Faustformel ist beispielsweise: 300 kg Zement, 180 l Wasser sowie 1890 kg Zuschläge ergeben einen Kubikmeter Beton der ungefähr der Festigkeitsklasse C25/30 entspricht. Um allerdings zuverlässig die Festbetoneigenschaften abzuschätzen reichen die Angaben nicht aus. Sowohl der Zement, als auch die Gesteinskörnung können je nach gewähltem Produkt die Festigkeit erheblich beeinflussen, weshalb solche einfachen Rezepturen beim Bau von tragenden Strukturen keine Anwendung finden dürfen.
+
+=== Konsistenz ===
+Konsistenzprüfung mit dem Ausbreitversuch bei einem sehr fließfähigen Beton
+
+Die Konsistenz des Frischbetons beschreibt einfach gesprochen, wie „flüssig“, bzw. „zäh“ der Frischbeton ist. Sie ist vorab entsprechend zu wählen, sodass der Beton ohne wesentliches Entmischen gefördert, eingebaut und praktisch vollständig verdichtet werden kann. Die dafür maßgebende Frischbetoneigenschaft ist die Verarbeitbarkeit. Die Frischbetonkonsistenz ist vor Baubeginn festzulegen und während der Bauausführung einzuhalten. 
+
+Die genormten Konsistenzbereiche erstrecken sich von „(sehr) steif“, über „plastisch“, „weich“ und „sehr weich“ bis hin zu „(sehr) fließfähig“. An die Konsistenzbereiche sind Messwerte geknüpft, die mit genormten, baustellengerechten Verfahren, wie dem Ausbreitversuch, dem Setzversuch und dem Verdichtungsversuch geprüft und kontrolliert werden können. Das nachträgliche Zumischen von Wasser zum fertigen Frischbeton, z. B. bei Ankunft auf der Baustelle, verbessert zwar die Fließeigenschaften, ist nach den deutschen Vorschriften allerdings unzulässig, da dadurch der Wasserzementwert und in der Folge die Festbetoneigenschaften negativ beeinflusst werden können. Einem Transportbeton darf vor Ort aber Fließmittel beigemischt werden, um die Verarbeitbarkeit zu verbessern. Die zulässige Höchstmenge liegt bei zwei Liter/m³, was aus einem plastischen Beton einen leicht fließfähigen Beton macht.
+
+Die Einbaubedingungen legen die nötige Konsistenz fest. Für Bauteile mit komplizierten Geometrien oder hohen Bewehrungsgraden ist tendenziell ein eher fließfähigerer Beton vonnöten. Auch die Förderung des Frischbetons bestimmt die benötigte Konsistenz. Soll ein Beton beispielsweise mit einer Betonpumpe gefördert werden, sollte die Betonkonsistenz mindestens im plastischen Bereich, d. h. Ausbreitmaßklasse F2, besser F3, liegen.
+
+=== Einbau und Verdichtung ===
+Verdichtung mit einem Flaschenrüttler
+Beton ist schnellstmöglich nach dem Mischen bzw. der Anlieferung einzubauen und mit geeigneten Geräten zu verdichten. Durch das Verdichten werden die Lufteinschlüsse ausgetrieben, damit ein dichtes Betongefüge mit wenigen Luftporen entsteht. Rütteln, Schleudern, Stampfen, Stochern, Spritzen und Walzen sind je nach Betonkonsistenz und Einbaumethode geeignete Verdichtungsverfahren. Als Verdichtungsgerät kommt auf Baustellen des Hochbaus heutzutage in der Regel der Innenrüttler (auch „Flaschen-“ oder „Tauchrüttler“ genannt) zum Einsatz. Bei der Herstellung hoher Bauteile oder bei sehr enger Bewehrung können auch Außenrüttler („Schalungsrüttler“) verwendet werden. Beim Einbau von Beton für Straßen oder Hallenböden ist eine Verdichtung mit Hilfe von Rüttelbohlen üblich. Rütteltische werden im Fertigteilwerk benutzt.
+
+Bereits beim Einbau ist darauf zu achten, dass sich der Beton nicht entmischt, d. h. dass sich größere Körner unten absetzen und sich an der Oberfläche eine Wasser- oder Wasserzementschicht bildet. Frischbeton darf deshalb nicht aus größerer Höhe in die Schalung fallen gelassen werden. Durch Rutschen, Fallrohre oder Schläuche ist der Beton bis in die Schalung zu leiten, sodass die maximale freie Fallhöhe nicht mehr als 1,5 m beträgt. Um anschließend gut verdichten zu können, muss der Beton außerdem in Lagen von höchstens 50 cm Höhe eingebaut werden. Erst nach der Verdichtung einer Lage folgt die nächste. 
+
+Ein Entmischen, sodass sich an der Oberfläche eine wässrige Zementschlämme bildet, kann sich auch bei einer zu großen Rütteldauer einstellen. Das Absondern von Wasser an der Betonoberfläche nach dem Einbau wird auch als „Bluten“ bezeichnet. Die Entmischung wirkt sich insbesondere nachteilig auf die Festigkeit und Dauerhaftigkeit des Betons aus. Bei richtiger Verdichtung und passender Konsistenz bildet sich an der Oberfläche nur eine dünne Feinmörtelschicht. Im restlichen Betonkörper sind die Gesteinskörner annähernd gleichmäßig verteilt.
+
+Beim Einbau des Frischbetons sollte die Betontemperatur zwischen +5 °C und +30 °C liegen, anderenfalls sind besondere Maßnahmen erforderlich. Im Winter kann dies z. B. das Heizen der Schalung mit Gebläsen sein. Im Sommer ist gegebenenfalls eine Kühlung des Betons notwendig. 
+
+=== Nachbehandlung ===
+Eine Nachbehandlung des frischen Betons ist zum Schutz der Betonoberfläche gegen Austrocknung und somit zur Sicherstellung einer geschlossenen, dichten und dauerhaften Betonoberfläche erforderlich. Dazu muss auch in den oberflächennahen Bereichen des Betons genügend Wasser für die Hydratation des Zements vorhanden sein. Dieses darf insbesondere nicht durch Sonneneinstrahlung, Frost und/oder Wind verdunsten. Es gibt verschiedene Nachbehandlungsmethoden, um den Erhärtungsprozess sicherzustellen. 
+
+Die erforderliche Zeitdauer der Nachbehandlung kann je nach den Betoneigenschaften, den Umweltbedingungen, die den Expositionsklassen entsprechen und den klimatischen Randbedingungen zwischen einem Tag, einer Woche oder auch mehr betragen. Grundsätzlich ist es am besten, so früh wie möglich nach der Betonage mit der Nachbehandlung zu beginnen und möglichst lange diese Maßnahmen durchzuführen, um Bauteile mit optimalen Festbetoneigenschaften zu erhalten. 
+
+==== Nachbehandlungsmethoden im Sommer ====
+Im Sommer ist die Verdunstung das größte Problem. Wasser muss also zugeführt und/oder vor dem Verdunsten bewahrt werden, z. B. durch das Auflegen einer wasserdichten Abdeckung, den Einsatz spezieller Nachbehandlungsfolien oder durch das kontinuierliche Besprühen oder Fluten mit Wasser. Des Weiteren kann das schnelle Austrocknen des Betons z. B. durch das Belassen in der Schalung, durch das Abdichten mit Kunststofffolien oder durch das Auftragen filmbildender Nachbehandlungsmittel, verhindert werden. 
+
+==== Nachbehandlungsmethoden im Winter ====
+Im Winter muss der Frischbeton bei Frost während den ersten drei Tagen nach der Betonage durchgehend eine Mindesttemperatur von +10 °C haben. Nach drei Tagen unter diesen Bedingungen ist der Beton so weit ausgehärtet, dass gefrierendes Wasser nicht mehr zu Frostsprengungen führen kann. Erreicht wird die Beibehaltung der Temperatur z. B. durch eine Abdeckung mit einer wärmedämmenden Folie oder durch die Abdeckung mit einem beheizten Bauzelt. Auch hier ist zu beachten, dass dem Beton genügend Wasser für die Hydratation des Zements zur Verfügung steht. 
+
+=== Erhärtung ===
+Der Zement dient als Bindemittel, um die anderen Bestandteile zusammenzuhalten. Die Festigkeit des Betons entsteht durch Auskristallisierung der Klinkerbestandteile des Zements unter Wasseraufnahme. Es wachsen Kristallnadeln, die sich fest ineinander verzahnen. Das Kristallwachstum hält über Monate an, sodass die endgültige Festigkeit erst lange nach dem Betonguss erreicht wird. Es wird aber, wie in der DIN 1164 (Festigkeitsklassen von Zement), angenommen, dass bei normalen Temperatur- und Feuchtigkeitsbedingungen nach 28 Tagen die Normfestigkeit erreicht ist. Neben dieser hydraulischen Reaktion entwickelt sich bei silikatischen Zuschlagstoffen zusätzlich die sogenannte puzzolanische Reaktion.
+
+== Festbeton ==
+Als Festbeton wird der erhärtete Frischbeton bezeichnet.
+
+=== Festigkeitsklassen ===
+Die Druckfestigkeit ist eine der wichtigsten Eigenschaften des Betons. Die DIN 1045-2 (Tragwerke aus Beton, Stahlbeton und Spannbeton) schreibt eine Beurteilung durch die Prüfung nach 28 Tagen Wasserlagerung anhand von Würfeln mit 15 cm Kantenlänge (Probewürfeln) oder 30 cm langen Zylindern mit 15 cm Durchmesser vor. Die Vorschriften für die Geometrie und Lagerung der Prüfkörper sind weltweit nicht einheitlich geregelt und haben sich auch in den einzelnen Normgenerationen geändert. Anhand der ermittelten Druckfestigkeit, die im Bauteil abweichen kann, lässt sich der Beton den Festigkeitsklassen zuordnen. Ein C12/15 hat danach die charakteristische Zylinderdruckfestigkeit von 12 N/mm² sowie eine charakteristische Würfeldruckfestigkeit von 15 N/mm². Das C in der Nomenklatur steht für englisch concrete (deutsch: Beton). Im Zuge der Harmonisierung des europäischen Normenwerks sind diese Betonfestigkeitsklassen in der aktuellen Normengeneration europaweit vereinheitlicht. In der folgenden Tabelle sind die Bezeichnungen nach der alten DIN 1045 noch zur Information in der letzten Spalte angegeben.
+
+ Druckfestigkeitsklassen für Normalbeton nach Eurocode 2 und Bezeichnung nach alter DIN 1045 
+ Überwachungs-klasse Festigkeitsklasse charakteristische Zylinder- druckfestigkeit (N/mm²) Mittelwert der Zylinder- druckfestigkeit (N/mm²) Mittlere Zugfestigkeit (N/mm²) Mittlerer E-Modul (N/mm²) Bezeichnung nachalter DIN 1045 
+ 1 C8/10* 8 — Keine normative Festlegung von Messgrößen. — — B10 
+ C12/15 12 20 1,6 27000 B15 
+ C16/20 16 24 1,9 29000 — Keine entsprechende Festigkeitsklasse in der alten DIN 1045 definiert. 
+ C20/25 20 28 2,2 30000 B25 
+ C25/30 25 33 2,6 31000 — 
+ 2 C30/37 30 38 2,9 33000 B35 
+ C35/45 35 43 3,2 34000 B45 
+ C40/50 40 48 3,5 35000 — 
+ C45/55 45 53 3,8 36000 B55 
+ C50/60 50 58 4,1 37000 — 
+ 3 C55/67 55 63 4,2 38000 B65 
+ C60/75 60 68 4,4 39000 B75 
+ C70/85 70 78 4,6 41000 B85 
+ C80/95 80 88 4,8 42000 B95 
+ C90/105 90 98 5,0 44000 — 
+ C100/115 100 108 5,2 45000 — 
+ 
+ 
+
+=== Elastizitätsmodul, Schubmodul und Querdehnungszahl ===
+Spannungsdehnungsbeziehung von Beton für verschiedene Festigkeiten
+Der Elastizitätsmodul des Betons hängt in hohem Maße von den verwendeten Betonzuschlägen ab. Vereinfachend kann er im linear-elastischen Spannungszustand (d. h. maximal 40 % der Festigkeit) in Abhängigkeit von der Betonfestigkeit nach dem Eurocode mit der empirischen Gleichung ermittelt werden. DIN EN 1992-1-1: Eurocode 2: Bemessung und Konstruktion von Stahlbeton- und Spannbetontragwerken – Teil 1-1: Allgemeine Bemessungsregeln und Regeln für den Hochbau. Deutsche Fassung EN 1992-1-1:2004 + AC:2010. S. 27 ff. Somit beträgt der Elastizitätsmodul bei den Betonfestigkeitsklassen von C12/15 bis C50/60 nach Eurocode zwischen 27.000 N/mm² und 37.000 N/mm².
+
+Die Querdehnungszahl schwankt im Bereich der Gebrauchsspannungen je nach Betonzusammensetzung, Betonalter und Betonfeuchte zwischen 0,15 und 0,25. Gemäß den Normen kann der Einfluss mit 0,2 bei ungerissenem Beton berücksichtigt werden. Für gerissenen Beton ist die Querdehnungszahl zu Null zu setzen. 
+
+Der Schubmodul kann näherungsweise, wie bei isotropen Baustoffen, aus Elastizitätsmodul und Querdehnungszahl errechnet werden.
+
+=== Rohdichte ===
+Die Rohdichte des Betons hängt vom Zuschlag ab. Bei Normalbeton beträgt die Trockenrohdichte zwischen 2000 und 2600 kg/m³. Meist können 2400 kg/m³ angesetzt werden. Betone oberhalb von 2600 kg/m³ werden als Schwerbeton bezeichnet, unterhalb von 2000 kg/m³ als Leichtbeton. DIN 1045-1 Tragwerke aus Beton, Stahlbeton und Spannbeton – Teil 1: Bemessung und Konstruktion, Abs. 3.1.4 bis 3.1.5 Leichtbeton hat porige Leichtzuschläge wie Blähton oder Bims. Er ist normativ in die Rohdichteklassen 1,0 – 1,2 – 1,4 – 1,6 – 1,8 – 2,0 eingeteilt, welche den Rohdichten zwischen 1000 und 2000 kg/m³ entsprechen. Stahlbeton hat näherungsweise eine um 100 kg/m³ erhöhte Rohdichte. 
+
+=== Verbundzone ===
+Abbindeverhalten normalfesten Betons, gut zu erkennen ist die Verbundzone
+Eine Schwachstelle im Gefüge des hydratisierten Betons stellt die Verbundzone zwischen Zementstein und Gesteinskörnung dar. Durch die Ansammlung von Ettringit und Portlandit (CH, Calciumhydroxid) an den Rändern der Gesteinskörner können sich keine verfestigenden CSH-Phasen bilden. Das hat eine verringerte Festigkeit in diesem Bereich zur Folge. Durch Zugabe von Puzzolanen wird das Portlandit über die puzzolanische Reaktion in CSH-Phasen umgewandelt. Puzzolane sind hochsilikatische Zuschlagsstoffe wie Mikrosilika oder Flugasche. Das hochalkalische Milieu löst sie partiell und leitet eine Reaktion mit dem Calciumhydroxyd (CH) zu CSH ohne zusätzliche Wasseraufnahme ein:
+* 2SiO2 + 3Ca(OH)2 → 3CaO + 2SiO2 + 3H2O
+oder kurz:
+* S + CH → CSH
+
+Vor allem bei der Entwicklung und Herstellung von hochfestem- und ultrahochfestem Beton hat dies eine große Bedeutung. www.vdz-online.de Kompendium Zementbeton 2-3_Entwurfskriterien PDF-Datei 
+
+=== Poren im Beton ===
+Neben der Festigkeit ist die Porosität des Betons ein wichtiges Qualitätskriterium. Die verschiedenen Arten von Poren unterscheiden sich voneinander teilweise stark in Entstehung und Auswirkung. Grundsätzlich sinkt mit steigender Kapillar-, Luft- und Verdichtungsporosität die Festigkeit proportional. Auch eine Verringerung des Elastizitätsmodul ist nachweisbar. Simone Hempel: Skript BAUSTOFFE – TEIL 3, Übung 3-5, Beton – Struktur, Hydratation, Porosität, Institut für Baustoffe (TU Dresden), Auflage des WS 07/08 
+Man unterscheidet folgende Arten von Poren:
+* Gelporen (Ø ca. 0,1–10 nm)
+*: Das physikalisch gebundene Anmachwasser, welches als Gelwasser bezeichnet wird, ist in Gelporen gespeichert. Da immer der gleiche Anteil Wasser in Gelwasser umgewandelt wird, lässt sich ihre Entstehung nicht vermeiden.
+* Schrumpfporen (Ø ca. 10 nm)
+*: Da die Reaktionsprodukte der Hydratation ein kleineres Volumen als die Ausgangsstoffe haben, kommt es zu Schrumpfvorgängen. Es bilden sich Schrumpfporen. Ihre Entstehung kann ebenfalls nicht vermieden werden.
+* Kapillarporen (Ø 10 nm–100 µm)
+*: Bei w/z-Werten > 0,42 bleibt für die Hydratation nicht benötigtes Wasser im Beton zurück, welches mit der Zeit austrocknet und Kapillarporen hinterlässt. Diese sind verantwortlich für Transportprozesse und beeinflussen stark die Festigkeit und dem E-Modul des Werkstoffs. Ihr Gesamtvolumen ist durch die Wahl eines günstigen w/z-Werts steuerbar.
+* Luftporen (Ø 1 µm–1 mm)
+*: Durch den Mischvorgang gelangt Luft in das Zementgel, welche Luftporen bildet. Sie stellen einen Ausweichsraum für gefrierendes Wasser dar und erhöhen somit die Frostbeständigkeit des Betons. Eine gezielte Beeinflussung des Anteils an Luftporen ist durch Luftporenbildner möglich.
+* Verdichtungsporen (Ø > 1 mm)
+*: Verdichtungsporen entstehen durch unzureichende Verdichtung des Betons nach dem Einbau. Aufgrund ihrer Größe können sie die Festigkeit des Werkstoffs deutlich beeinflussen. Bei der Herstellung von Sichtbetonoberflächen sind Verdichtungsporen unerwünscht.
+
+=== Bauphysikalische Eigenschaften ===
+Für Beton kann eine Wasserdampfdiffusionswiderstandszahl zwischen 70 (feucht) und 150 (trocken) angesetzt werden. Die Wärmeleitfähigkeit beträgt zirka 2,1 W/mK für Normalbeton, die spezifische Wärmekapazität 1000 J/(kg·K). Beide Werte sind jedoch stark vom Zuschlagstoff abhängig. Der Wärmeausdehnungskoeffizient beträgt nach den Stahlbetonnormen 10-5/K (zum Beispiel DIN 1045-1:2001-07). Allerdings kann dieser je nach Art des Betonzuschlags, Zementgehalt sowie Feuchtezustand des Betons zwischen 6 und 14·10-6/K variieren. Der Feuchtegehalt beträgt bei 23 °C und 50 % relativer Luftfeuchtigkeit 25 Liter Wasser je Kubikmeter Beton und bei 80 % relativer Luftfeuchtigkeit 40 l/m³. 
+Alle diese Betoneigenschaften sind außerdem stark temperaturabhängig und gelten näherungsweise nur für einen Bereich deutlich unter 100 °C.
+
+== Überwachungsklassen ==
+Für die Überprüfung der maßgebenden Frisch- und Festbetoneigenschaften wird der Beton in drei Überwachungsklassen eingeteilt. Daraus ergibt sich der Umfang und die Häufigkeit der Prüfungen, was in DIN 1045-3 geregelt ist. Beton der Überwachungsklassen 1, 2 und 3 ist u. a. durch Eigenüberwachung der ausführenden Firma und eine anerkannte Überwachungsstelle zu überprüfen. Wobei die Prüfungen in der Überwachungsklasse 1 nur der Selbstkontrolle der ausführenden Firma dient. Die Überwachungsklasse 2 wird bei Betonen mit erhöhten Anforderungen wie z. B. WU-, Spann-, Unterwasser- und Strahlenschutzbeton u.s.w. angewandt. Geprüft wird mit mindestens drei Probekörpern jeden 3. Betoniertag oder alle 300 m³.
+In der Überwachungsklasse 3 erfolgt die Prüfung mindestens jeden Betoniertag oder alle 50 m³. beton.org: Überwachen von Beton auf Baustellen 
+
+== Betonsorten ==
+Unter einer Betonsorte versteht man eine genau definierte Mischung, die immer wieder, entsprechend einer Betonrezeptur, hergestellt wird. Lieferwerke haben meist eigene Sorten, die von Kunden bestellt werden. Bei großen Bauvorhaben stellen oft auch die Bauunternehmen in Absprache mit dem Bauherrn und den Lieferwerken eigene Betonsorten in einem Sortenverzeichnis zusammen. Diese Betone sind dann für eine Baustelle und deren Besonderheiten „maßgeschneidert“.
+
+== Betonarten ==
+
+Alle Betone lassen sich entsprechend ihrer Herstellung, ihrer Einbauart oder ihrer besonderen Eigenschaften unterscheiden. Dabei gehört ein Beton nicht zwangsläufig nur einer Art an. Ein und dasselbe Produkt wird meist mehreren Kategorien zugeordnet. Beispielsweise ist jeder Beton entweder ein Transport- oder ein Baustellenbeton. Abhängig von den Eigenschaften sind diese Betone dann z.B. Luftporenbetone, hochfeste Betone usw. Die verwendeten Bezeichnungen der gebräuchlichen Betone sind in der Liste gebräuchlicher Betone aufgeführt.
+
+== Dauerhaftigkeit, Schädigungen und Instandsetzung ==
+
+Betonstütze mit freiliegender Bewehrung
+
+Für dauerhafte Betonbauwerke müssen die verlangten Gebrauchseigenschaften und die Standsicherheit unter den planmäßigen Beanspruchungen über die erwartete Nutzungsdauer bei normalem Unterhaltsaufwand konstant sein.
+Wichtig für eine ausreichende Dauerhaftigkeit des Betons sind die Betonzusammensetzung (Wasserzementwert und Zementgehalt), die Festigkeitsklasse, die Verdichtung und die Nachbehandlung des Betons.
+
+Beton ist ein chemisch instabiler Baustoff. Verschiedene innere und äußere Einflüsse können die Beständigkeit von Beton nachhaltig beeinflussen. Durch die typische Anwendung von Beton im Verbund mit Bewehrung aus Stahl ergeben sich weitere die Dauerhaftigkeit von Beton beeinflussende Faktoren, wie zu geringe Überdeckung des Bewehrungstahles durch Beton. Daher erfolgt mit den Expositionsklassen eine Klassifizierung der chemischen und physikalischen Umgebungsbedingungen, denen der Beton ausgesetzt ist, woraus sich Anforderungen an die Zusammensetzung des zu verwendenden Betons sowie bei Stahlbeton die Betondeckung ergeben.
+
+Folgende Schädigungsmechanismen können auftreten:
+* Bewehrungskorrosion aufgrund von Carbonatisierung des Betons
+* Lochfraßkorrosion der Bewehrung durch eingetragene Chloride
+* Betonkorrosion infolge von:
+** Sulfattreiben
+** Alkali-Kieselsäure-Reaktion
+** Kalktreiben
+** Frost-Tau-Wechsel
+
+Oberflächenschutzsysteme, wie Anstriche oder die Imprägnierung der Betonoberflächen mit einem Hydrophobierungsmittel, dienen der Verbesserung der Dauerhaftigkeit und können sowohl direkt nach der Herstellung aufgebracht werden oder im Zuge einer Betoninstandsetzung eine Maßnahme zur Lebensdauerverlängerung darstellen.
+
+Zur Betoninstandsetzung zählen zudem alle Maßnahmen, bei denen Schäden (Risse, Abplatzungen usw.) behoben und die ursprünglichen Schutzeigenschaften des Betons möglichst wiederhergestellt oder verbessert werden.
+
+== Einbauteile ==
+Zur Reduzierung des Eigengewichtes von Betonteilen werden unter anderem sogenannte Verdrängungskörper eingebaut. Dies bewirkt, dass Hohlräume entstehen und weniger Beton notwendig ist. Häufig wird das bei Plattenkonstruktionen angewendet.
+
+Früher wurden hierfür Teile aus Polystyrolschaum und anderen Schaumstoffen genutzt, die heute wegen nachteiliger Auswirkungen bei Bränden nicht mehr gestattet sind. Derzeit werden Kugeln oder würfelförmige Elemente aus Polyethylen oder Polypropylen eingesetzt, wodurch bis zu einem Drittel des Betons und folglich des Eigengewichtes eingespart werden kann. So sind große Bauteile, z. B. Dachkonstruktionen, mit Stützweiten von bis zu 19 Metern möglich.
+
+Aufgrund von größeren Bauschäden aus der Vergangenheit ist in Deutschland der Einbau von Verdrängungskörpern bei Brückenbauten nicht mehr zulässig.
+
+== Vorgefertigte Betonprodukte ==
+* Betonwerkstein
+* Betonpflasterstein
+* Betonplatte
+
+== Der Begriff „Beton“ in anderen Zusammenhängen ==
+Die Bezeichnung „Beton“ wird auch in Zusammenhang mit anderen Baustoffen verwendet und soll deren hohe Festigkeit oder deren Zusammensetzungsprinzip beschreiben.
+
+=== Porenbeton ===
+Porenbeton (veraltet Gasbeton) ist ein mineralischer Werkstoff, welcher durch chemisches Aufschäumen einer Mörtelmischung erzeugt wird. Die alkalische Mörtelsuspension reagiert unter Bildung von Gas mit Pulvern unedler Metalle wie z. B. Aluminium. Porenbeton enthält so gut wie keine Zuschläge. Porenbeton besitzt im Vergleich zu konventionellem Beton wegen seiner geringen Rohdichte eine geringe Festigkeit und eine geringe Wärmeleitfähigkeit.
+
+=== Betonglas ===
+Betonglas ist ein Glasbaustein, der waagerecht angeordnet wird und hohe Druckfestigkeit aufweist. Nicht zu verwechseln ist dies mit Betoglass, welches ein Verbundsystem beschreibt, mit dem Glas auf Beton befestigt werden kann.
+
+=== Asphaltbeton ===
+Asphaltbeton ist eine Bezeichnung für ein Gemisch aus Bitumen und Gesteinskörnung. Der Namensteil „-beton“ verweist hier auf das „Betonprinzip“ der Mischung, d.h. wie beim Baustoff Beton sind im Asphaltbeton verschiedene Gesteinskörnungsgrößen gleichmäßig verteilt und vollständig von Bindemittel ummantelt.
+
+=== Mineralbeton ===
+Mineralbeton ist eine Bezeichnung für ein hochverdichtetes Mineralstoffgemisch, meist unter Verwendung eines hohen Anteils gebrochenen Korns. Die Sieblinie ist gemäß der Fuller-Parabel aufzubauen, es ist ein für die Verdichtung optimaler Wassergehalt einzustellen. Beim Einbau sind Entmischungen zu vermeiden. Mineralbeton wird ohne Bindemittel zu einem hochstandfesten Baustoff, der etwa in Straßendecken verwendet wird. Gängiges Produkt ist die korngestufte Schottertragschicht mit 0–32 mm als Frostschutzmaterial gemäß ZTV T-StB 95.
+
+=== Schwefelbeton ===
+Schwefelbeton ist eine Mischung aus Quarzsand, Kalkstein oder Schottersteinen, der als Bindemittel 15–20 % Schwefel beigemischt wird. Der Schwefel wird vorher mit dimeren Cyclopentadien modifiziert und als plastischer Schwefel stabilisiert. Der Schwefelbeton besitzt gegenüber Beton eine höhere Druck- und Zugfestigkeit sowie Frühfestigkeit und ist wesentlich korrosionsbeständiger gegenüber Säuren und Salzlösungen. Nachteilig sind das Erweichen bei Temperaturen über 120 °C und die Brennbarkeit. Die Verwendung ist in Deutschland bisher eingeschränkt. Die Einsatzmöglichkeit von Schwefelbeton ist dort von Bedeutung, wo aggressive Chemikalien und grundwasserschädliche Stoffe zum Einsatz kommen bzw. gelagert oder umgefüllt werden. Ralf Steudel, Hans-Joachim Mäusle: Flüssiger Schwefel – ein Rohstoff komplizierter Zusammensetzung, Chemie in unserer Zeit, 14. Jahrg. 1980, Nr. 3, S. 79, Diplomarbeit über Schwefelbeton 
+
+== Verwandte Themen ==
+* Biorock-Technologie, Herstellungsweise eines betonähnlichen Werkstoffes im Meer
+* Brutalismus, ein Architekturstil mit Sichtbeton
+* Ökologische Bedenken beim Einsatz von Zement als Bindemittel, siehe Zement#Umweltschutzaspekte
+
+== Literatur ==
+* Friedbert Kind-Barkauskas (Hrsg.): Beton Atlas. Entwerfen mit Stahlbeton im Hochbau, Herausgegeben von Institut für Internationale Architektur-Dokumentation, München. Bau+Technik, Düsseldorf 1995-2013, ISBN 978-3-7640-0340-1 / ISBN 978-3-7640-0425-5 / ISBN 3-481-00910-0.
+* Beton-Kalender. Alle Jahrgänge. Ernst & Sohn, Berlin 2014 (und davor), ISBN 978-3-433-03073-8 / und .
+* Hefte des Deutschen Ausschuss für Stahlbeton (DAfStb), .
+* Christoph Hackelsberger: Beton. Stein der Weisen? Nachdenken über einen Baustoff. Vieweg-Verlag, 1988, ISBN 3-528-08779-X.
+* Fritz Leonhardt, Eduard Mönnig: Vorlesungen über Massivbau. 5 Bände, Springer, Berlin 1973ff, ISBN 3-540-06488-5.
+* Beton und Kunst Fehlhaber, Drees, Knopp. (Arman, Niki de Saint Phalle, Wolf Vostell, und andere) Beton Verlag, Düsseldorf 1997, ISBN 3-7640-0369-3.
+* Peter Grübl, Helmut Weigler, Sieghart Karl: Beton – Arten, Herstellung, Eigenschaften. Ernst & Sohn, Berlin 2001, ISBN 978-3-433-01340-3.
+* Konrad Zilch, Gerhard Zehetmaier: Bemessung im konstruktiven Betonbau. Springer, Berlin 2009, ISBN 978-3-540-70637-3.
+* BWI Betonwerk International - Fachzeitschriften für die Betonindustrie.
+
+== Weblinks ==
+
+* Merkblätter des Vereins Deutscher Zementwerke e. V. zu diversen Themen über Beton
+* Gemeinsame Informationsseite der deutschen Zement- und Betonindustrie
+* Bundesverband der Deutschen Transportbetonindustrie e. V.
