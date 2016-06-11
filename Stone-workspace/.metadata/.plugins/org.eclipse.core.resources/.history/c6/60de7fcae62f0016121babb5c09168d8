@@ -4,21 +4,27 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.SortedSet;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import java.sql.Statement;
 
 class Word
 {
@@ -48,29 +54,19 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		
-//		for (int i = 0; i < args.length; i++)
-//			Debug.Log(args[i]);
+		for (int i = 0; i < args.length; i++)
+			Debug.Log(args[i]);
 //		Debug.Log("Init!");
 //		Debug.Seperator();
 		
-//		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
-//		String satz = "Hallo, ich bin eine Kuh."; 
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
-		String satz = "#WAITING_FOR_INPUT";
-		try {
-			satz = br.readLine();
-		} catch (IOException e) {
-			Debug.Error("Invalid input stream!");
-		}
-//		Debug.Log(satz);
+		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
+		
 		List<Word> words = AnalyseSentence(satz);
 //		for (int i = 0; i < words.size(); i++)
 //			Debug.Log(words.get(i).word + "   Noun: " + words.get(i).Noun 
 //			+ "   Frequency: " + words.get(i).frequency);
-		String ret = StripOutAndConcat(words, Integer.parseInt(args[0]));
-		if (ret != null)
-		System.out.println(ret + "[@23]"); /* RETURN TO CLIENT */
+		String ret = StripOutAndConcat(words, 1);
+		System.out.println(ret); /* RETURN TO CLIENT */
 //		for (int i = 0; i < words.size(); i++)
 //			Debug.Log(words.get(i).word + "   Noun: " + words.get(i).Noun 
 //					+ "   Frequency: " + words.get(i).frequency);
