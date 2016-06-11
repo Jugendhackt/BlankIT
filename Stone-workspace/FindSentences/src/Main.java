@@ -50,7 +50,8 @@ public class Main
 		for (int i = 0; i < sentences.size(); i++)
 		{
 			float value = CalculateSentenceValue(conn, sentences.get(i));
-			sentenceSort.put(sentences.get(i), value);
+			if (value > 0)
+				sentenceSort.put(sentences.get(i), value);
 //			Debug.Log("ADD: " + sentences.get(i) + "[" + value + "]");
 			//Map<Integer, String> sentenceSort = new TreeMap<Integer, String>();		
 		}
@@ -83,6 +84,9 @@ public class Main
 	public static float CalculateSentenceValue(Connection conn, String sentence)
 	{		
 		String[] words = SplitSentence(sentence);
+		
+		if (sentence.matches(".*?[=*)(:\\]\\[/0-9]+.*?|^[A-Z].*?"))
+			return -1f;
 		
 		long sum = 0;
 		int nounC = 0;
