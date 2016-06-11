@@ -1,0 +1,148 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
+public class Main 
+{
+	public static String DBIP = "127.0.0.1";
+	public static void main(String[] args)
+	{
+		int Fq = 1;
+		if (args.length > 0)
+			Fq = Integer.parseInt(args[0]);
+		if (args.length > 1)
+			DBIP = args[1];
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
+		String satz = "";
+		
+		int add;
+		try{
+			while ((add = br.read()) != -1)
+			{
+				satz += (char)add;
+				if (satz.contains("[@24]"))
+					break;
+			}
+		}catch (Exception ex) {Debug.Error("Error in input stream");}
+		
+		satz.replace("[@24]", "");
+		satz = SanitizeString(satz);
+		List<String> sentences = SplitText(satz);
+		for (int i = 0; i < sentences.size(); i++)
+			Debug.Log("[" + CalculateSentenceValue(sentences.get(i)) 
+				+ "]:" + sentences.get(i) + "\n");
+		
+	}
+	
+	public static String SanitizeString(String sentence)
+	{
+//		sentence = sentence.replace(". ", ".");
+//		sentence = sentence.replace("! ", "!");
+//		sentence = sentence.replace("? ", "?");
+		return sentence;
+	}
+	
+	public static List<String> SplitText(String sentence)
+	{
+		List<String> ret = new ArrayList<String>();
+		String[] add = sentence.split("(?<![0-9])[.]|[!?\n\r]");
+		for (int i = 0; i < add.length; i++)
+			ret.add(add[i] + (i = add.length -1 ? "" : "."));
+		return ret;
+	}
+	
+	public static float CalculateSentenceValue(String sentence)
+	{
+		Connection conn = GetDBConnection();
+		
+		String[] words = SplitSentence(sentence);
+		
+		long sum = 0;
+		int nounC = 0;
+		for (String word : words)
+			if (IsWordNoun(conn, word))
+			{
+				nounC++;
+				sum += GetWordCount(conn, word);
+			}
+		
+	
+		return (nounC > 1 ? sum/nounC : -1f);
+	}
+	
+	public static String[] SplitSentence(String sentence)
+	{
+//		sentence = sentence.replace("  ", " ");
+		
+		String[] ret = sentence.split(" ");
+		return ret;
+	}
+	
+	public static boolean IsWordNoun(Connection conn, String word)
+	{
+		try
+		{
+//			Debug.Log("Checking... " + word);
+			PreparedStatement stmt = conn.prepareStatement(
+					"SELECT COUNT(*) AS count FROM Nomen WHERE Wort=?");
+			stmt.setString(1, word);
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			rs.next();
+			return rs.getInt("count") == 1;
+		} catch (SQLException e) {
+			Debug.Error("Hier bin ich!!! FEHLER FEHLER!! \n\n" + 
+			e.getMessage() + "\n\n" + e.getStackTrace());
+		}
+		return false;
+	}
+	
+	public static int GetWordCount(Connection conn, String word)
+	{
+		try
+		{
+			PreparedStatement stmt = conn.prepareStatement(
+				"SELECT sum(anz) AS count FROM woAnz WHERE Wort=?");
+			stmt.setString(1, word);
+			ResultSet rs = stmt.executeQuery();
+
+			rs.next();
+			return rs.getInt("count");
+		} catch (SQLException e) {
+			Debug.Error("Hier bin ich!!! FEHLER FEHLER!! \n\n" + 
+			e.getMessage() + "\n\n" + e.getStackTrace());
+		}
+		return -1;
+	}
+	
+	public static Connection GetDBConnection()
+	{
+		MysqlDataSource dataSource = new MysqlDataSource();
+		dataSource.setUser("jh");
+		dataSource.setPassword("");
+		dataSource.setDatabaseName("WC");
+		//dataSource.setPort("3306");
+		dataSource.setServerName(DBIP);
+		Connection conn;
+		try {
+			conn = dataSource.getConnection();
+			conn.createStatement().executeQuery("SET collation_connection = 'latin1_general_cs'");
+			return conn;
+			
+		} catch (SQLException e) {
+			Debug.Error("Hier bin ich!!! FEHLER FEHLER!! \n\n" + 
+			e.getMessage() + "\n\n" + e.getStackTrace());
+		}
+		return null;
+	}
+}

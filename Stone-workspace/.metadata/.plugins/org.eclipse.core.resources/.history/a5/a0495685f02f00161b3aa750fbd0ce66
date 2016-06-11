@@ -1,0 +1,40 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.List;
+
+public class Main 
+{
+	public static String DBIP = "127.0.0.1";
+	public static void main(String[] args)
+	{
+		int Fq = 1;
+		if (args.length > 0)
+			Fq = Integer.parseInt(args[0]);
+		if (args.length > 1)
+			DBIP = args[1];
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
+		String satz = "#WAITING_FOR_INPUT";
+		
+		boolean run = true;
+		int add;
+		try{
+			while ((add = br.read()) != -1)
+			{
+				satz += (char)add;
+			}
+		}catch (Exception ex) {Debug.Error("Error in input stream");}
+		
+		List<String> Sentences = SplitText(satz);
+	}
+	
+	public static List<String> SplitText(String sentence)
+	{
+		List<String> ret = new List<String>();
+		String[] add = sentence.split("(?<![0-9])[.]|[!?\n\r]")
+		for (int i = 0; i < add.length; i++)
+			ret.add(add[i]);
+		return ret;
+	}
+}

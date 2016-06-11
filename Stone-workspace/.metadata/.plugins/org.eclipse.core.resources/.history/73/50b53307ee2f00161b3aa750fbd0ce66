@@ -1,0 +1,26 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Main 
+{
+	public static String DBIP = "127.0.0.1";
+	public static void main(String[] args)
+	{
+		
+//		for (int i = 0; i < args.length; i++)
+//			Debug.Log(args[i]);
+//		Debug.Log("Init!");
+//		Debug.Seperator();
+		
+//		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
+//		String satz = "Hallo, ich bin eine Kuh."; 
+		int Fq = 1;
+		if (args.length > 0)
+			Fq = Integer.parseInt(args[0]);
+		if (args.length > 1)
+			DBIP = args[1];
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
+		String satz = "#WAITING_FOR_INPUT";
+	}
+}
