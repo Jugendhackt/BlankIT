@@ -49,20 +49,22 @@ int main( int argc, char* argv[] )
 
     string full = "";
     string line;
-    ifstream myfile( "../../../auto.txt");//Wikipedia-txt/20140616-wiki-de_000000.txt" );
+    //ifstream myfile( "../../../auto.txt");//Wikipedia-txt/20140616-wiki-de_000000.txt" );
 
-    if( myfile.is_open() )
-    {
+    //if( myfile.is_open() )
+    //{
         unsigned int i = 0;
 
-        while( getline( myfile, line ) )
+        while( getline( cin, line ) )
         {
+            if(line=="EOF")
+                break;
             full += line + "\n";
             i++;
         }
 
-        myfile.close();
-    }
+        //myfile.close();
+    //}
 
     //cout << "Hello world!" << endl;
 
