@@ -15,3 +15,16 @@ D.Wort = ?;
 Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , 
 die die Eigenschaften des Baustoffs gezielt beeinflussen.
 
+
+function sanitizeString($inp, $replaceEnter = true)
+{
+	/*** memove UNICODE to prevent a multi-byte charset attack vector ***/
+	$inp = mb_convert_encoding ($inp, 'UTF-8');
+	/*** sanitize the string ***/
+	$inp = filter_var($inp, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+	if ($replaceEnter)
+		$inp = str_replace("\n", "<br/>", $inp);
+
+	return $inp;
+}
+
