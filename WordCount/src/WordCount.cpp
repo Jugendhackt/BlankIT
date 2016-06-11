@@ -76,7 +76,6 @@ string makeSentence(vector<string> sen){
         ret+=sen[i];
         ret+=" ";
     }
-    ret=ret.substr(0,ret.length()-1);
     ret+=".";
     return ret;
 }
@@ -156,7 +155,7 @@ int WordCount::procData()
             c1++;
         }
     }
-    cout<<c2<<"/"<<c1<<endl;
+    //cout<<c2<<"/"<<c1<<endl;
 
     //"select D.ID,D.Wort,W.anz from dict as D join worte as W on D.ID=W.ID where D.Wort IN();"
 
