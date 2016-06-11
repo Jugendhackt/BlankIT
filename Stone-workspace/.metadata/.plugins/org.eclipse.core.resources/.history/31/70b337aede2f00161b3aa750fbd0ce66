@@ -212,7 +212,6 @@ public class Main
 		try {
 			
 			conn = dataSource.getConnection();
-			conn.createStatement().executeQuery("SET collation_connection = 'latin1_general_cs'");
 			return conn;
 			
 		} catch (SQLException e) {
