@@ -8,3 +8,6 @@ DB server:
 User: jh
 Password: -leer-
 DB name: WC
+
+select D.ID,D.Wort,W.anz from dict as D join worte as W on D.ID=W.ID AND 
+D.Wort = ?;

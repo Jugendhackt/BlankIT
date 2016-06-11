@@ -43,9 +43,9 @@ int main( int argc, char* argv[] )
     driver = get_driver_instance();
     con = driver->connect( "tcp://127.0.0.1:3306", "jh", "" );
     con->setSchema( "WC" );
-    /*sql::Statement *stmt = con->createStatement();
+    sql::Statement *stmt = con->createStatement();
     stmt->execute("SET collation_connection = 'latin1_general_cs'");
-    delete stmt;*/
+    delete stmt;
 
     string full = "";
     string line;
@@ -70,7 +70,7 @@ int main( int argc, char* argv[] )
     wc.readFile( full );
     cout << "eingelesen" << endl;
     wc.procData();
-    cout<<"verarbeitet"<<endl;
+    cout << "verarbeitet" << endl;
     /*wc.storeData();
     cout<<"gespeichert"<<endl;
     stmt->execute("SELECT D.ID,D.Wort,W.anz FROM dict AS D JOIN worte AS W ON W.ID=D.ID AND W.anz>50 JOIN flags AS F ON F.ID=D.ID AND F.flag = 'satzanf' AND F.anz < W.anz*0.2 WHERE D.Wort REGEXP '^[A-ZÄÖÜ][a-zäöüÄÖÜ]*$';");*/
