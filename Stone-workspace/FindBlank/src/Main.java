@@ -1,8 +1,17 @@
 //ps -ax | grep tomcat
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.SortedSet;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -32,37 +41,40 @@ class Word
 	
 }
 
+class TreeMapComperator implements Comparator<Integer>
+{
+    public int compare(Integer o1,Integer o2)
+    {
+    	return o1 < o2 ? 1 : 0;
+    }
+}
+
+
 public class Main 
 {
 	public static void main(String[] args)
 	{
+//		for (int i = 0; i < args.length; i++)
+//			Debug.Log(args[i]);
+//		Debug.Log("Init!");
+//		Debug.Seperator();
 		
-		Debug.Log("Init!");
-		Debug.Seperator();
-		
-		//int quatschafaktor = 1;		
 		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
 		
 		List<Word> words = AnalyseSentence(satz);
-		
-		for (int i = 0; i < words.size(); i++)
-			Debug.Log(words.get(i).word + "   Noun: " + words.get(i).Noun 
-					+ "   Frequency: " + words.get(i).frequency);
-//		String sentence = "Hallo, ich bin ein Noun!";
-//		String[] parts = SplitSentence(sentence);
-//		
-//		List<Word> words = new ArrayList<Word>();
-//		
-//		for (int i = 0; i < parts.length; i++)
-//		{
-//			boolean Noun = IsWordNoun(parts[i]);
-//			words.add(new Word(parts[i], Noun));
-//		}
+//		for (int i = 0; i < words.size(); i++)
+//			Debug.Log(words.get(i).word + "   Noun: " + words.get(i).Noun 
+//			+ "   Frequency: " + words.get(i).frequency);
+		String ret = StripOutAndConcat(words, 1);
+		System.out.println(ret); /* RETURN TO CLIENT */
+//		for (int i = 0; i < words.size(); i++)
+//			Debug.Log(words.get(i).word + "   Noun: " + words.get(i).Noun 
+//					+ "   Frequency: " + words.get(i).frequency);
 	}
 	
 	public static String[] SplitSentence(String sentence)
 	{
-		sentence = sentence.replace("  ", " ");
+//		sentence = sentence.replace("  ", " ");
 		
 		String[] ret = sentence.split(" ");
 		return ret;
@@ -88,9 +100,61 @@ public class Main
 		return words;
 	}
 	
-	public static void StripOut(List<Word> word)
+	public static String StripOutAndConcat(List<Word> words, int Fq)
 	{
+		////INDEX////FREQUENCY///////
+		Map<Integer, Integer> nouns = new HashMap<Integer, Integer>();
+		for (int i = 0; i < words.size(); i++)
+			if (words.get(i).Noun) nouns.put(i, words.get(i).frequency);
 		
+		if (nouns.size() == 0) return null;
+		
+		nouns = sortByValue(nouns);
+		
+		int maxTake = nouns.size();
+		int noun = (int)Math.floor(Math.random() * Math.min(maxTake, Fq));
+		int index = (int)nouns.keySet().toArray()[noun];
+		words.get(index).word = "[" + words.get(index).word + "]";
+		
+		
+		//CONCAT
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < words.size(); i++)
+			sb.append(words.get(i).word + (i == words.size()-1 ? "" : " "));
+		return sb.toString();
+	}
+	
+	public static Map<Integer, Integer> SortMapByKey(Map<Integer, Integer> orgMap)
+	{
+		TreeMap<Integer, Integer> treeMap = new TreeMap<Integer, Integer>();
+
+		for (int i = 0; i < orgMap.size(); i++)
+		{
+			Integer index = (Integer) orgMap.keySet().toArray()[i];
+			treeMap.put(index, orgMap.get(index));
+		}
+		return treeMap;
+	}
+
+	public static <K, V extends Comparable<? super V>> Map<K, V> 
+    sortByValue( Map<K, V> map )
+	{
+	    List<Map.Entry<K, V>> list =
+	        new LinkedList<Map.Entry<K, V>>( map.entrySet() );
+	    Collections.sort( list, new Comparator<Map.Entry<K, V>>()
+	    {
+	        public int compare( Map.Entry<K, V> o1, Map.Entry<K, V> o2 )
+	        {
+	            return (o1.getValue()).compareTo( o2.getValue() );
+	        }
+	    } );
+	
+	    Map<K, V> result = new LinkedHashMap<K, V>();
+	    for (Map.Entry<K, V> entry : list)
+	    {
+	        result.put( entry.getKey(), entry.getValue() );
+	    }
+	    return result;
 	}
 
 	
@@ -98,8 +162,9 @@ public class Main
 	{
 		try
 		{
-			Debug.Log("Checking... " + word);
-			PreparedStatement stmt = conn.prepareStatement("SELECT COUNT(*) AS count FROM Nomen WHERE LOWER(wort)=LOWER(?)");
+//			Debug.Log("Checking... " + word);
+			PreparedStatement stmt = conn.prepareStatement(
+					"SELECT COUNT(*) AS count FROM Nomen WHERE Wort=?");
 			stmt.setString(1, word);
 			
 			ResultSet rs = stmt.executeQuery();
@@ -118,7 +183,7 @@ public class Main
 		try
 		{
 			PreparedStatement stmt = conn.prepareStatement(
-"select sum(W.anz) AS count from dict as D join worte as W on D.ID=W.ID AND LOWER(D.Wort) = LOWER(?);");
+				"SELECT sum(anz) AS count FROM woAnz WHERE Wort=?");
 			stmt.setString(1, word);
 			ResultSet rs = stmt.executeQuery();
 
