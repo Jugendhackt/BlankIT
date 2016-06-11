@@ -5,32 +5,31 @@ WordCount::WordCount( sql::Connection* c )
     con = c;
 }
 
-int WordCount::readFile( string text )
+int WordCount::readText( string text )
 {
-    strs.clear();
-    string fu = text;
+    strs.clear();//clear maybe already stored texts
 
-    vector<vector<string>> lstrs;
+    vector<vector<string>> lstrs;//list of sentences with it's words for the current text
 
-    boost::regex re1( "[\?!;,\()\"\':]|(?<![0-9])[.]" );
-    string full = boost::regex_replace( fu, re1, " $& " );
+    boost::regex re1( "[\?!;,\()\"\':]|(?<![0-9])[.]" );//replace all kinds of special cases with single spaces to make words only seperated by one space
+    string full = boost::regex_replace( text, re1, " $& " );
     boost::regex re2( "[ ]+" );
     full = boost::regex_replace( full, re2, " " );
     boost::regex re3( "([\[][\[])(.*?)([]][]])" );
-    full = boost::regex_replace( full, re3, "$&$2\n" );
+    full = boost::regex_replace( full, re3, "$&$2\n" );//integrate headline into text
 
 
     vector<string> tem;
-    boost::algorithm::split_regex( tem, full, boost::regex( "(?<![0-9])[.]|[!?\n\r]" ) );
+    boost::algorithm::split_regex( tem, full, boost::regex( "(?<![0-9])[.]|[!?\n\r]" ) );//split by points if there is no number before it and by ! and ?
 
-    for( unsigned int j = 0; j < tem.size(); j++ )
+    for( unsigned int j = 0; j < tem.size(); j++ )//split sentences into words by spaces and newlines
     {
         vector<string> tem2;
         boost::algorithm::split( tem2, tem[j], is_any_of( " \n\r" ) );
-        lstrs.push_back( tem2 );
+        lstrs.push_back( tem2 );//insert sentence into local list
     }
 
-    ///leere Wörter löschen
+    //remove empty words and sentences
     for( unsigned int k = 0; k < lstrs.size(); k++ )
     {
         for( unsigned int j = 0; j < lstrs[k].size(); j++ )
@@ -49,92 +48,85 @@ int WordCount::readFile( string text )
         }
     }
 
-    strs.push_back( lstrs );
+    strs.push_back( lstrs );//add current text to global storage
 
     return 0;
 }
 
-string makeSentence( vector<string> sen )
+string makeSentence( vector<string> sen )//make sentence of word vector
 {
-    string ret = "";
+    string ret = "";//string to return
 
-    for( size_t i = 0; i < sen.size(); i++ )
+    for( size_t i = 0; i < sen.size(); i++ )//go through all words
     {
-        ret += sen[i];
+        ret += sen[i];//add them together, seperated by spaces -> also , because they do not belong to the word
         ret += " ";
     }
 
-    ret += ".";
+    ret += ".";//add the final dot
     return ret;
 }
 
 int WordCount::procData( unsigned int maxi )
 {
-    //get how often a german word exists in Wikipedia DE in median
-    sql::Statement* stmt = con->createStatement();
+    sparse_hash_map<string, unsigned int> wos;//list of diferent words occuring in the text
 
-    sql::ResultSet* res = stmt->executeQuery( "select sum(anz) from Nomen;" );//get sum of number of words
-    unsigned int su = 0;//save the sum
-
-    while( res->next() )
-        su = res->getUInt( "sum(anz)" );
-
-    delete res;
-    res = stmt->executeQuery( "select count(*) from Nomen;" );//get the total amount of different words
-    unsigned int si = 0;//save the amount
-
-    while( res->next() )
-        si = res->getUInt( "count(*)" );
-
-    double mid = ( double )su / ( double )si;//save the median
-
-
-    sparse_hash_map<string, unsigned int> wos;
-
-    for( unsigned int l = 0; l < strs.size(); l++ )
+    for( unsigned int l = 0; l < strs.size(); l++ )//go through each word -> index of text
     {
-        for( unsigned int k = 0; k < strs[l].size(); k++ )
+        for( unsigned int k = 0; k < strs[l].size(); k++ )//-> index of sentence
         {
-            for( unsigned int j = 0; j < strs[l][k].size(); j++ )
-                wos[strs[l][k][j]] = 0;
+            for( unsigned int j = 0; j < strs[l][k].size(); j++ )//-> index of word
+                wos[strs[l][k][j]] = 0;//initialize map -> first assign 0 -> will be replaced with the correct number
         }
     }
 
-    sql::PreparedStatement* loadAnz = con->prepareStatement( "select D.ID,D.Wort,W.anz from dict as D join worte as W on D.ID=W.ID AND D.Wort = ?;" );
+    sql::PreparedStatement* loadAnz = con->prepareStatement( "select Wort,anz from woAnz where Wort = ?;" );
+    //woAnz contains the word as string and its number of occurrences in the german Wikipedia
+    //fetch the correct numbers from DB
+    unsigned int su = 0;//save the sum of the number of occurrences of the words in the current text
+    unsigned int si = 0;//save the amount of the words in the current text
 
-    for( auto t = wos.begin(); t != wos.end(); ++t )
+    for( auto t = wos.begin(); t != wos.end(); ++t )//go through all words of the given text
     {
-        loadAnz->setString( 1, t->first );
-        sql::ResultSet* res = loadAnz->executeQuery();
+        loadAnz->setString( 1, t->first );//insert word to prepared statement
+        sql::ResultSet* res = loadAnz->executeQuery();//run the query and store the (single) result
 
         while( res->next() )
-            wos[t->first] = res->getUInt( "anz" );
+        {
+            wos[t->first] = res->getUInt( "anz" );//assign the correct number of occurrences
+            su += res->getUInt( "anz" );
+            si++;
+        }
 
-        delete res;
+        delete res;//free the space of the result
     }
 
-    delete loadAnz;
+    delete loadAnz;//free the space of the query
+
+    double mid = ( double )su / ( double )si;//save the median
 
     vector<string> validSen;//valid sentences to choose from
 
-    for( unsigned int l = 0; l < strs.size(); l++ )
+    for( unsigned int l = 0; l < strs.size(); l++ )//go through all sentences and text(s)
     {
         for( unsigned int k = 0; k < strs[l].size(); k++ )
         {
-            unsigned int counter = 0;
+            unsigned int counter = 0;//count how many words of the current sentence are below the median
 
             for( unsigned int j = 0; j < strs[l][k].size(); j++ )
             {
-                if( wos[strs[l][k][j]] <= mid )
+                if( wos[strs[l][k][j]] <= mid )//if the word's number of occurrences is below or equal to the median, it is "accepted"
                     counter++;
             }
 
-            if( strs[l][k].size() > 3 )//&& ( double )counter / ( double )strs[l][k].size() > 0.25 && ( double )counter / ( double )strs[l][k].size() < 0.75
+            //filter out sentences with 3 words or fewer and sentences where nearly all or nearly no words are "important" -> filter by percentage
+            if( strs[l][k].size() > 3 && ( double )counter / ( double )strs[l][k].size() > 0.15 && ( double )counter / ( double )strs[l][k].size() < 0.85 )
             {
-                string s = makeSentence( strs[l][k] );
+                string s = makeSentence( strs[l][k] );//make sentence from word vector
 
-                if( !boost::regex_match( s.c_str(), boost::regex( ".*?[=*)(:\\]\\[/0-9]+.*?|^[^A-Z].*?" ) ) )
-                    validSen.push_back( s );
+                if( !boost::regex_match( s.c_str(), boost::regex( ".*?[=*)(:\\]\\[/0-9]+.*?|^[^A-Z].*?" ) ) )//filter out sentences with annoying special characters
+                    //filtered out: =*)(:][/0-9 or if the first character of the sentence is not a capital letter
+                    validSen.push_back( s );//if the sentence fulfills all these requirements, add it to the glorious league of valid sentences ;)
             }
         }
     }

@@ -27,13 +27,13 @@ using google::sparse_hash_set;
 
 class WordCount {
     public:
-        WordCount( sql::Connection* c );
-        vector<vector<vector<string>>> strs;//[text][satz][wort]
-        sql::Connection* con;
-        int readFile( string text );
-        int procData( unsigned int maxi );
+        WordCount( sql::Connection* c );//contructor gets connection to mysql DB
+        int readText( string text );//read a text from a long plain string
+        int procData( unsigned int maxi );//process data stored in strs, giving the max number of sentences to return (0=all)
     protected:
     private:
+        vector<vector<vector<string>>> strs;//[text][satz][wort] -> scalable -> multiple texts at once
+        sql::Connection* con;//store that connection in class
 };
 
 #endif // WORDCOUNT_H

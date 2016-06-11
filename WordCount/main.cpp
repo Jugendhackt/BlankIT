@@ -17,8 +17,9 @@ sql::Statement* stmt;
 
 int main( int argc, char* argv[] )
 {
-    srand( time( NULL ) );
-    driver = get_driver_instance();
+    srand( time( NULL ) );//init random by time
+
+    driver = get_driver_instance();//set the charset for the current connection to avoid collisions with invalid converions
     con = driver->connect( "tcp://127.0.0.1:3306", "jh", "" );
     con->setSchema( "WC" );
     sql::Statement* stmt = con->createStatement();
@@ -29,7 +30,7 @@ int main( int argc, char* argv[] )
     string line;
     unsigned int i = 0;
 
-    while( getline( cin, line ) )
+    while( getline( cin, line ) )//read until the pipe text ends (getline ends the loop) or until you only read EOF
     {
         if( line == "EOF" )
             break;
@@ -38,13 +39,13 @@ int main( int argc, char* argv[] )
         i++;
     }
 
-    WordCount wc( con );
-    wc.readFile( full );
+    WordCount wc( con );//create the class with the connection of above
+    wc.readText( full );//read the text to strs
 
     if( argc == 2 )//if a max number of sentences is given -> use it -> if it is a string atoi returns 0
-        wc.procData( atoi( argv[1] ) );
+        wc.procData( atoi( argv[1] ) );//return sentences
     else//if there is no max given, print all (0)
-        wc.procData( 0 );
+        wc.procData( 0 );//return sentences
 
     return 0;
 }
