@@ -1,7 +1,6 @@
 //ps -ax | grep tomcat
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.naming.Context;
@@ -20,45 +19,40 @@ import java.sql.Statement;
 class Word
 {
 	public String word;
-	public boolean Noun;
+	public boolean nomen;
 	public int frequency;
 	
-	public Word(String word, boolean Noun, int frequency)
+	public Word(String word, boolean nomen)
 	{
 		this.word = word;
-		this.Noun = Noun;
-		this.frequency = frequency;
+		this.nomen = nomen;
 	}
-	
 }
 
 public class Main 
 {
+	
+	
 	public static void main(String[] args)
 	{
+		Connection conn = GetDBConnection();
 		
 		Debug.Log("Init!");
 		Debug.Seperator();
 		
-		int quatschafaktor = 1;
-		IsWordNoun(GetDBConnection(), "Apfel");
-		
-		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
-		
-		List<Word> words = AnalyseSentence(satz);
-		
-		for (int i = 0; i < words.size(); i++)
-			Debug.Log(words.get(i).word + "   Noun: " + words.get(i).Noun 
-					+ "   Frequency: " + words.get(i).frequency);
-//		String sentence = "Hallo, ich bin ein Noun!";
+		boolean r = IsWordNomen(conn, "haus");
+		Debug.Log("" + r);
+		int b = GetWordCount(conn, "haus");
+		Debug.Log("" + b);
+//		String sentence = "Hallo, ich bin ein Nomen!";
 //		String[] parts = SplitSentence(sentence);
 //		
 //		List<Word> words = new ArrayList<Word>();
 //		
 //		for (int i = 0; i < parts.length; i++)
 //		{
-//			boolean Noun = IsWordNoun(parts[i]);
-//			words.add(new Word(parts[i], Noun));
+//			boolean nomen = IsWordNomen(parts[i]);
+//			words.add(new Word(parts[i], nomen));
 //		}
 	}
 	
@@ -69,49 +63,18 @@ public class Main
 		String[] ret = sentence.split(" ");
 		return ret;
 	}
-	
-	public static List<Word> AnalyseSentence(String sentence)
-	{
-		Connection conn = GetDBConnection();
-		
-		String[] parts = SplitSentence(sentence);
-		List<Word> words = new ArrayList<Word>();
-				
-		for (int i = 0; i < parts.length; i++)
-		{
-			String part = parts[i];
-			
-			boolean noun = IsWordNoun(conn, part);
-			int frequency = noun ? GetWordCount(conn, part) : -1;
-			
-			Word word = new Word(part, noun, frequency);
-			words.add(word);
-		}
-		return words;
-	}
-	
-	public static void StripOut(List<Word> word)
-	{
-		
-	}
 
 	
-	public static boolean IsWordNoun(Connection conn, String word)
+	public static boolean IsWordNomen(Connection conn, String word)
 	{
 		try
 		{
-			Debug.Log("Checking... " + word);
 			PreparedStatement stmt = conn.prepareStatement("SELECT COUNT(*) AS count FROM Nomen WHERE LOWER(wort)=LOWER(?)");
 			stmt.setString(1, word);
-			
 			ResultSet rs = stmt.executeQuery();
-			
 			rs.next();
 			return rs.getInt("count") == 1;
-		} catch (SQLException e) {
-			Debug.Error("Hier bin ich!!! FEHLER FEHLER!! \n\n" + 
-			e.getMessage() + "\n\n" + e.getStackTrace());
-		}
+		}catch (Exception ex) {Debug.Error("Exception !!!");}
 		return false;
 	}
 	
@@ -119,17 +82,12 @@ public class Main
 	{
 		try
 		{
-			PreparedStatement stmt = conn.prepareStatement(
-"select sum(W.anz) AS count from dict as D join worte as W on D.ID=W.ID AND LOWER(D.Wort) = LOWER(?);");
+			PreparedStatement stmt = conn.prepareStatement("SELECT COUNT(*) AS count FROM Nomen WHERE LOWER(wort)=LOWER(?)");
 			stmt.setString(1, word);
 			ResultSet rs = stmt.executeQuery();
-
 			rs.next();
 			return rs.getInt("count");
-		} catch (SQLException e) {
-			Debug.Error("Hier bin ich!!! FEHLER FEHLER!! \n\n" + 
-			e.getMessage() + "\n\n" + e.getStackTrace());
-		}
+		}catch (Exception ex) {Debug.Error("Exception !!!");}
 		return -1;
 	}
 	
