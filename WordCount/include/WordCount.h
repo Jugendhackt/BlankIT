@@ -2,14 +2,11 @@
 #define WORDCOUNT_H
 
 #include <iostream>
-#include <fstream>
 #include <boost/regex.hpp>
 #include <boost/algorithm/string.hpp>
 #include <boost/algorithm/string/regex.hpp>
-#include <google/sparse_hash_map>
 #include <google/sparse_hash_set>
-#include <regex>
-#include <Wort.h>
+#include <google/sparse_hash_map>
 
 #include "mysql_connection.h"
 
@@ -30,8 +27,6 @@ using google::sparse_hash_set;
 class WordCount {
     public:
         WordCount( sql::Connection* c );
-        virtual ~WordCount();
-        unsigned int TID;
         vector<vector<vector<string>>> strs;//[text][satz][wort]
         sql::Connection* con;
         int readFile( string text );
