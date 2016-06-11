@@ -11,3 +11,7 @@ DB name: WC
 
 select D.ID,D.Wort,W.anz from dict as D join worte as W on D.ID=W.ID AND 
 D.Wort = ?;
+
+Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , 
+die die Eigenschaften des Baustoffs gezielt beeinflussen.
+

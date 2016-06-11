@@ -142,17 +142,16 @@ int WordCount::procData()
                     counter++;
                 }
             }
+            boost::cmatch cont;
             if(strs[l][k].size()>3&&(double)counter/(double)strs[l][k].size()>0.25 && (double)counter/(double)strs[l][k].size()<0.75){
                 string s = makeSentence(strs[l][k]);
-                if(s.find("=")==std::string::npos
-                   && s.find("*")==std::string::npos
-                   && s.find(")")==std::string::npos
-                   && s.find("(")==std::string::npos
-                   && s.find(":")==std::string::npos
-                   && s.find("/")==std::string::npos)
+                if(!boost::regex_match(s.c_str(),boost::regex(".*?[=*)(:/0-9]+.*?"))){
+                    c2++;
                     cout<<s<<endl;
+                }
                 //cout<<l<<"  "<<k<<" "<<counter<<"/"<<strs[l][k].size()<<endl;
-                c2++;
+
+                //cout<<cont.size()<<cont[0]<<endl;
             }
             c1++;
         }
