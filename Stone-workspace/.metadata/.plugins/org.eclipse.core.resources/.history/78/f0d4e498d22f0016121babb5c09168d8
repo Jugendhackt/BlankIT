@@ -27,7 +27,6 @@ class Word
 	{
 		this.word = word;
 		this.Noun = Noun;
-		this.frequency = frequency;
 	}
 	
 }
@@ -40,8 +39,9 @@ public class Main
 		Debug.Log("Init!");
 		Debug.Seperator();
 		
-		//int quatschafaktor = 1;		
-		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
+		IsWordNoun(GetDBConnection(), "Apfel");
+		
+		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten ,die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
 		
 		List<Word> words = AnalyseSentence(satz);
 		
@@ -80,7 +80,7 @@ public class Main
 			String part = parts[i];
 			
 			boolean noun = IsWordNoun(conn, part);
-			int frequency = noun ? GetWordCount(conn, part) : -1;
+			int frequency = GetWordCount(conn, part);
 			
 			Word word = new Word(part, noun, frequency);
 			words.add(word);
@@ -118,12 +118,15 @@ public class Main
 		try
 		{
 			PreparedStatement stmt = conn.prepareStatement(
-"select sum(W.anz) AS count from dict as D join worte as W on D.ID=W.ID AND LOWER(D.Wort) = LOWER(?);");
+	"select W.anz AS count from dict as D join worte as W on D.ID=W.ID AND D.Wort = ?;");
 			stmt.setString(1, word);
 			ResultSet rs = stmt.executeQuery();
-
-			rs.next();
-			return rs.getInt("count");
+			if (rs.next())
+			{
+				rs.next();
+				return rs.getInt("count");
+			}
+			return -1;
 		} catch (SQLException e) {
 			Debug.Error("Hier bin ich!!! FEHLER FEHLER!! \n\n" + 
 			e.getMessage() + "\n\n" + e.getStackTrace());
