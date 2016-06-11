@@ -13,9 +13,9 @@
 				<Option compiler="gcc" />
 				<Option projectCompilerOptionsRelation="2" />
 				<Compiler>
-					<Add option="-O3" />
 					<Add option="-w" />
 					<Add option="-std=c++11" />
+					<Add option="-g" />
 					<Add directory="include" />
 					<Add directory="/usr/include" />
 				</Compiler>
@@ -43,10 +43,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/WordCount.h" />
-		<Unit filename="include/Wort.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/WordCount.cpp" />
-		<Unit filename="src/Wort.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
