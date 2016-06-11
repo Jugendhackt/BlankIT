@@ -1,17 +1,17 @@
 #include "Wort.h"
 
-Wort::Wort(string wo, unsigned int co, unsigned int id)
+Wort::Wort( string wo, unsigned int co, unsigned int id )
 {
     //oftInSatz.set_empty_key(4294967294);
-    oftInSatz.set_deleted_key(4294967295);
+    oftInSatz.set_deleted_key( 4294967295 );
     //oftInDir.set_empty_key(4294967294);
-    oftInDirV.set_deleted_key(4294967295);
-    oftInDirH.set_deleted_key(4294967295);
+    oftInDirV.set_deleted_key( 4294967295 );
+    oftInDirH.set_deleted_key( 4294967295 );
     //oftInText.set_empty_key("%%%-leer-%%%");
-    oftInText.set_deleted_key(4294967295);
-    attr.set_deleted_key("%%%-gelöscht-%%%");
-    flags.set_deleted_key("%%%-gelöscht-%%%");
-    glW.set_deleted_key(4294967295);
+    oftInText.set_deleted_key( 4294967295 );
+    attr.set_deleted_key( "%%%-gelöscht-%%%" );
+    flags.set_deleted_key( "%%%-gelöscht-%%%" );
+    glW.set_deleted_key( 4294967295 );
     w = wo;
     c = co;
     WID = id;
@@ -19,18 +19,18 @@ Wort::Wort(string wo, unsigned int co, unsigned int id)
 Wort::Wort()
 {
     //oftInSatz.set_empty_key(4294967294);
-    oftInSatz.set_deleted_key(4294967295);
+    oftInSatz.set_deleted_key( 4294967295 );
     //oftInDir.set_empty_key(4294967294);
-    oftInDirV.set_deleted_key(4294967295);
-    oftInDirH.set_deleted_key(4294967295);
+    oftInDirV.set_deleted_key( 4294967295 );
+    oftInDirH.set_deleted_key( 4294967295 );
     //oftInText.set_empty_key("%%%-leer-%%%");
-    oftInText.set_deleted_key(4294967295);
-    attr.set_deleted_key("%%%-gelöscht-%%%");
-    flags.set_deleted_key("%%%-gelöscht-%%%");
-    glW.set_deleted_key(4294967295);
+    oftInText.set_deleted_key( 4294967295 );
+    attr.set_deleted_key( "%%%-gelöscht-%%%" );
+    flags.set_deleted_key( "%%%-gelöscht-%%%" );
+    glW.set_deleted_key( 4294967295 );
     w = "";
     c = 0;
-    WID=0;
+    WID = 0;
 }
 
 Wort::~Wort()
