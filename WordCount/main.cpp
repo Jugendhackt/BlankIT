@@ -49,7 +49,7 @@ int main( int argc, char* argv[] )
 
     string full = "";
     string line;
-    ifstream myfile( "/home/dvs23/Wikipedia-txt/20140616-wiki-de_000000.txt" );
+    ifstream myfile( "../../../auto.txt");//Wikipedia-txt/20140616-wiki-de_000000.txt" );
 
     if( myfile.is_open() )
     {

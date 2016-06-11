@@ -138,7 +138,7 @@ int WordCount::procData()
             unsigned int counter = 0;
             for( unsigned int j = 0; j < strs[l][k].size(); j++ )
             {
-                if(wos[strs[l][k][j]]<=mid*0.5){
+                if(wos[strs[l][k][j]]<=mid){
                     counter++;
                 }
             }
