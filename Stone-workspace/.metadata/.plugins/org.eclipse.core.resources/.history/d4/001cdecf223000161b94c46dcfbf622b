@@ -24,7 +24,7 @@ import org.w3c.dom.Element;
 public class Main 
 {
 	public static final String API_prefix =
-		"https://de.wikipedia.org/w/api.php" +
+		"https://en.wikipedia.org/w/api.php" +
 		"?format=xml&action=query&prop=extracts&exlimit=max&explaintext&titles=";
 	
 	public static void main(String[] args)

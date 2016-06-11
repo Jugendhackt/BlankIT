@@ -24,12 +24,13 @@ import org.w3c.dom.Element;
 public class Main 
 {
 	public static final String API_prefix =
-		"https://de.wikipedia.org/w/api.php" +
+		"https://en.wikipedia.org/w/api.php" +
 		"?format=xml&action=query&prop=extracts&exlimit=max&explaintext&titles=";
 	
 	public static void main(String[] args)
 	{
-		String wikiUrl = args[0];
+//		String wikiUrl = args[0];
+		String wikiUrl = "Google";
 		
 		String xml = getWikiXML(wikiUrl);
 		String out = ParseText (xml);
@@ -78,29 +79,25 @@ public class Main
     				
     		doc.getDocumentElement().normalize();
 
-//    		System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+    		System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
     				
     		NodeList nList = doc.getElementsByTagName("page");
     				
     		for (int temp = 0; temp < nList.getLength(); temp++) {
     			Node nNode = nList.item(temp);
     					
-//    			System.out.println("\nCurrent Element :" + nNode.getNodeName());
+    			System.out.println("\nCurrent Element :" + nNode.getNodeName());
     					
     			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
     				Element eElement = (Element) nNode;
     				
         			String idx = eElement.getAttribute("_idx");
-        			if (Integer.parseInt(idx) == -1)
-        				continue;
-        			
-        			return eElement.getTextContent();
     			}
     		}
 	    } catch (Exception e) {
-	    	e.printStackTrace();
+		e.printStackTrace();
 	    }
-    	return "[@31]No article found!";
+    	return "Done";
     }
 }
