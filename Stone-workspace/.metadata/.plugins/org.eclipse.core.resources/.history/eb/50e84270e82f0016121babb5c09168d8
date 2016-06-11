@@ -55,14 +55,14 @@ public class Main
 //		Debug.Seperator();
 		
 //		String satz = "Beton kann außerdem Betonzusatzstoffe und Betonzusatzmittel enthalten , die die Eigenschaften des Baustoffs gezielt beeinflussen.";  
-//		String satz = "Hallo, ich bin eine Kuh."; 
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
-		String satz = "#WAITING_FOR_INPUT";
-		try {
-			satz = br.readLine();
-		} catch (IOException e) {
-			Debug.Error("Invalid input stream!");
-		}
+		String satz = "Hallo, ich bin eine Kuh .";  
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));        
+//		String satz = "#WAITING_FOR_INPUT";
+//		try {
+//			satz = br.readLine();
+//		} catch (IOException e) {
+//			Debug.Error("Invalid input stream!");
+//		}
 //		Debug.Log(satz);
 		List<Word> words = AnalyseSentence(satz);
 //		for (int i = 0; i < words.size(); i++)
@@ -70,7 +70,7 @@ public class Main
 //			+ "   Frequency: " + words.get(i).frequency);
 		String ret = StripOutAndConcat(words, Integer.parseInt(args[0]));
 		if (ret != null)
-		System.out.println(ret + "[@23]"); /* RETURN TO CLIENT */
+		System.out.println(ret); /* RETURN TO CLIENT */
 //		for (int i = 0; i < words.size(); i++)
 //			Debug.Log(words.get(i).word + "   Noun: " + words.get(i).Noun 
 //					+ "   Frequency: " + words.get(i).frequency);
