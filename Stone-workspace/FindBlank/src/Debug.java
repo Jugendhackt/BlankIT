@@ -1,8 +1,10 @@
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.lang.Thread;
 import java.util.Formatter;
 import java.util.Locale;
+
+import java.lang.Thread;
+
+import java.text.SimpleDateFormat;
 
 enum DebugLevel
 {
@@ -26,10 +28,10 @@ public class Debug
         		break;
         	case HIGH:
         		formatter.format("[%s@%s@%s@%s.%-4d]: %s", prefix, GetCallerMethodeName(),
-															  GetCallerClassName()  , 
-															  GetCallerFileName()   , 
-															  GetCallerLineNumber()	,
-															  text);
+															  	   GetCallerClassName()  , 
+															  	   GetCallerFileName()   , 
+															  	   GetCallerLineNumber() ,
+															  	   text);
         		break;
         	default:
         		formatter.format("[%s]: %s", prefix, text);
@@ -39,6 +41,7 @@ public class Debug
         System.out.println(sb.toString());
         formatter.close();
     }
+    
     public static void Clear()
     {
         System.out.print("\f");
@@ -63,21 +66,20 @@ public class Debug
     } 
     public static void Todo()
     { 
-        out("TODO"		, "TODO IN CODE", DebugLevel.HIGH); 
+        out("TODO"		, "TODO CALLED IN CODE", DebugLevel.HIGH); 
     } 
 
     private static String GetCallerMethodeName(){ return GetStackTraceElement().getMethodName() ; }
     private static String GetCallerClassName() 	{ return GetStackTraceElement().getClassName() 	; }
     private static String GetCallerFileName() 	{ return GetStackTraceElement().getFileName() 	; }
     private static int GetCallerLineNumber() 	{ return GetStackTraceElement().getLineNumber()	; }
+    
     private static StackTraceElement GetStackTraceElement()
     {
         StackTraceElement[] stElements = Thread.currentThread().getStackTrace();
         for (int i=1; i<stElements.length; i++) {
             StackTraceElement ste = stElements[i];
             if (!ste.getClassName().equals(Debug.class.getName())  &&
-          //    !ste.getClassName().equals(Point.class.getName())  &&
-          //    !ste.getClassName().equals(Vector.class.getName()) &&
                 ste.getClassName().indexOf("java.lang.Thread")!=0) {
                 return ste;
             }
