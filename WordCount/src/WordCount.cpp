@@ -141,7 +141,6 @@ int WordCount::procData()
                     counter++;
                 }
             }
-            boost::cmatch cont;
             if(strs[l][k].size()>3&&(double)counter/(double)strs[l][k].size()>0.25 && (double)counter/(double)strs[l][k].size()<0.75){
                 string s = makeSentence(strs[l][k]);
                 if(!boost::regex_match(s.c_str(),boost::regex(".*?[=*)(:\\]\\[/0-9]+.*?|^[^A-Z].*?"))){
@@ -155,6 +154,7 @@ int WordCount::procData()
             c1++;
         }
     }
+    cout<<"[@24]"<<endl;
     //cout<<c2<<"/"<<c1<<endl;
 
     //"select D.ID,D.Wort,W.anz from dict as D join worte as W on D.ID=W.ID where D.Wort IN();"
