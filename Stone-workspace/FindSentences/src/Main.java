@@ -60,7 +60,7 @@ public class Main
 		StringBuilder ret = new StringBuilder();
 		for (int i = 0; i < Cnt && i < sentenceSort.size(); i++)
 			ret.append(sentenceSort.keySet().toArray()[i]);
-		System.out.println(ret.toString());
+		System.out.println(ret.toString() + "\n");
 	}
 	
 	public static String SanitizeString(String sentence)
