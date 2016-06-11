@@ -145,7 +145,7 @@ int WordCount::procData()
             boost::cmatch cont;
             if(strs[l][k].size()>3&&(double)counter/(double)strs[l][k].size()>0.25 && (double)counter/(double)strs[l][k].size()<0.75){
                 string s = makeSentence(strs[l][k]);
-                if(!boost::regex_match(s.c_str(),boost::regex(".*?[=*)(:\\]\\[/0-9]+.*?"))){
+                if(!boost::regex_match(s.c_str(),boost::regex(".*?[=*)(:\\]\\[/0-9]+.*?|^[^A-Z].*?"))){
                     c2++;
                     cout<<s<<endl;
                 }
