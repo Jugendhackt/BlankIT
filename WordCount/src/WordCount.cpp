@@ -13,16 +13,16 @@ WordCount::~WordCount()
 int WordCount::readFile( string text )
 {
     strs.clear();
-    string ful = text;
+    string fu = text;
 
-    vector<string> tete;
+    /*vector<string> tete;
     boost::algorithm::split_regex( tete, ful, boost::regex( "[[][[].*?[]][]]" ) );
     cout << tete.size() << endl;
 
     for( string fu : tete )
-    {
+    {*/
         vector<vector<string>> lstrs;
-        cout << fu.length() << endl;
+        //cout << fu.length() << endl;
 
         boost::regex re1( "[\?!;,\()\"\':]|(?<![0-9])[.]" );
         string full = boost::regex_replace( fu, re1, " $& " );
@@ -61,11 +61,11 @@ int WordCount::readFile( string text )
             }
         }
 
-        cout << "lstrs.size()" << lstrs.size() << endl;
+        //cout << "lstrs.size()" << lstrs.size() << endl;
         strs.push_back( lstrs );
-    }
+    //}
 
-    cout << "strs.size()" << strs.size() << endl;
+    //cout << "strs.size()" << strs.size() << endl;
 
     return 0;
 }
@@ -99,7 +99,7 @@ int WordCount::procData()
         si = res->getUInt( "count(*)" );
 
     double mid = ( double )su / ( double )si;
-    cout << mid << endl;
+    //cout << mid << endl;
     sparse_hash_map<string,unsigned int> wos;
 
     for( unsigned int l = 0; l < strs.size(); l++ )
@@ -112,7 +112,7 @@ int WordCount::procData()
             }
         }
     }
-    cout<<wos.size()<<endl;
+    //cout<<wos.size()<<endl;
 
     sql::PreparedStatement *loadAnz = con->prepareStatement("select D.ID,D.Wort,W.anz from dict as D join worte as W on D.ID=W.ID AND D.Wort = ?;");
     for(auto t = wos.begin(); t!=wos.end(); ++t)
@@ -145,7 +145,7 @@ int WordCount::procData()
             boost::cmatch cont;
             if(strs[l][k].size()>3&&(double)counter/(double)strs[l][k].size()>0.25 && (double)counter/(double)strs[l][k].size()<0.75){
                 string s = makeSentence(strs[l][k]);
-                if(!boost::regex_match(s.c_str(),boost::regex(".*?[=*)(:/0-9]+.*?"))){
+                if(!boost::regex_match(s.c_str(),boost::regex(".*?[=*)(:\\]\\[/0-9]+.*?"))){
                     c2++;
                     cout<<s<<endl;
                 }
