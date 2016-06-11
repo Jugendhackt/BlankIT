@@ -64,13 +64,13 @@ int main( int argc, char* argv[] )
         myfile.close();
     }
 
-    cout << "Hello world!" << endl;
+    //cout << "Hello world!" << endl;
 
     WordCount wc( con );
     wc.readFile( full );
-    cout << "eingelesen" << endl;
+    //cout << "eingelesen" << endl;
     wc.procData();
-    cout << "verarbeitet" << endl;
+    //cout << "verarbeitet" << endl;
     /*wc.storeData();
     cout<<"gespeichert"<<endl;
     stmt->execute("SELECT D.ID,D.Wort,W.anz FROM dict AS D JOIN worte AS W ON W.ID=D.ID AND W.anz>50 JOIN flags AS F ON F.ID=D.ID AND F.flag = 'satzanf' AND F.anz < W.anz*0.2 WHERE D.Wort REGEXP '^[A-ZÄÖÜ][a-zäöüÄÖÜ]*$';");*/
