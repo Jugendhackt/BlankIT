@@ -1,0 +1,8 @@
+Description='A simple open wireless connection'
+Interface=wlp0s29u1u3
+Connection=wireless
+Security=none
+ESSID='Jugend Hackt'
+IP=dhcp
+# Uncomment this if your ssid is hidden
+#Hidden=yes
