@@ -71,6 +71,10 @@ namespace WebUI
 
             InitQuest(PageRet);
             putQuestAndIncrease();
+            LueckenButton.Visible = true;
+            Lueckenfüller.Visible = true;
+            Lueckentext.Visible = true;
+            SkipQuest.Visible = true;
             //Debug.Text = solutions.Count + "|" + sentences.Count;
         }
         protected void Lueckentext_Change(object sender, EventArgs e)
@@ -150,12 +154,22 @@ namespace WebUI
 
         protected void ConfirmInput(object sender, ImageClickEventArgs e)
         {
-            if (Lueckenfüller.Text == currentSolution) putQuestAndIncrease();
+            if (Lueckenfüller.Text == currentSolution)
+            {
+                Lueckenfüller.Text = "";
+                putQuestAndIncrease();
+            }
         }
 
         protected void LueckenButton_Load(object sender, EventArgs e)
         {
             this.LueckenButton.Click += this.ConfirmInput;
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            //putQuestAndIncrease();
+            Lueckenfüller.Text = currentSolution;
         }
     }
 }
