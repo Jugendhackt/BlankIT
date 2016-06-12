@@ -2,13 +2,13 @@
 <section name="Workbench">
 	<section name="FatJarPackageWizard">
 		<item value="/home/stone/proj/autoquiz/Stone-workspace" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
-		<item value="Main (1) - FindSentences" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
-		<item value="/home/stone/proj/autoquiz/Stone-workspace/FindBlank.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="Main (2) - ParseWiki" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
+		<item value="/home/stone/proj/autoquiz/Stone-workspace/ParseWiki.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="1" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
-			<item value="/home/stone/proj/autoquiz/Stone-workspace/FindBlank.jar"/>
 			<item value="/home/stone/proj/autoquiz/Stone-workspace/ParseWiki.jar"/>
+			<item value="/home/stone/proj/autoquiz/Stone-workspace/FindBlank.jar"/>
 			<item value="/home/stone/proj/autoquiz/Stone-workspace/FindSentences.jar"/>
 		</list>
 		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
@@ -41,5 +41,12 @@
 	<section name="completion_proposal_size">
 	</section>
 	<section name="JavaElementSearchActions">
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.text.QuickOutline">
+		<item value="true" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_SIZE"/>
+		<item value="400" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_WIDTH"/>
+		<item value="504" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_HEIGHT"/>
+		<item value="false" key="GoIntoTopLevelTypeAction.isChecked"/>
+		<item value="false" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION"/>
 	</section>
 </section>
