@@ -12,10 +12,11 @@
             </p>
             <div class="viewer">
                 <p style="width: 100%">
-                    <asp:CheckBox ID="WikiEnabled" runat="server" />
-                    <asp:Label ID="Lueckentext" runat="server" Text="" Width="100%"> </asp:Label><br />
-                    <asp:TextBox ID="Lueckenfüller" runat="server" Width="381px" style="margin-left: 317"></asp:TextBox>
-                    <asp:ImageButton ID="LueckenButton" runat="server" Height="17px" OnClick="ConfirmInput" OnLoad="LueckenButton_Load" />
+                    <asp:CheckBox ID="WikiEnabled" runat="server" Text="Wikipedia durchsuchen" />
+                    <asp:Label ID="Lueckentext" runat="server" Width="100%" Visible="False"></asp:Label><br />
+                    <asp:Button ID="SkipQuest" runat="server" OnClick="Button1_Click" Text="Lösung" Visible="False" />
+                    <asp:TextBox ID="Lueckenfüller" runat="server" Width="381px" style="margin-left: 317" Visible="False"></asp:TextBox>
+                    <asp:ImageButton ID="LueckenButton" runat="server" Height="17px" OnClick="ConfirmInput" OnLoad="LueckenButton_Load" Visible="False" />
                 </p>
             </div>
         </div>
