@@ -31,6 +31,15 @@ namespace WebUI {
         protected global::System.Web.UI.WebControls.ImageButton SearchButton;
         
         /// <summary>
+        /// WikiEnabled-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox WikiEnabled;
+        
+        /// <summary>
         /// Lueckentext-Steuerelement
         /// </summary>
         /// <remarks>
@@ -56,14 +65,5 @@ namespace WebUI {
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton LueckenButton;
-        
-        /// <summary>
-        /// Debug-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Debug;
     }
 }
