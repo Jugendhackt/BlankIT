@@ -71,7 +71,7 @@ namespace WebUI
 
             InitQuest(PageRet);
             putQuestAndIncrease();
-            Debug.Text = solutions.Count + "|" + sentences.Count;
+            //Debug.Text = solutions.Count + "|" + sentences.Count;
         }
         protected void Lueckentext_Change(object sender, EventArgs e)
         {
@@ -83,7 +83,7 @@ namespace WebUI
              * Senden eines HTTP POST REQUEST mittels HttpWebRequest zu einer Adresse (url).
              */
 
-            string url = "http://192.168.173.28/index.php";
+            string url = (WikiEnabled.Checked)?"http://192.168.173.28/indexWiki.php":"http://192.168.173.28/index.php";
             string fq = "1";
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
             req.Method = "POST";
@@ -142,10 +142,10 @@ namespace WebUI
             currentSentenceIndex++;
             if (currentSentenceIndex == solutions.Count)
                 Response.Redirect("~/Success.aspx");
-            Debug.Text = currentSentenceIndex + "";
-            Lueckentext.Text = currentSentence.Replace(BLK, "").Replace(currentSolution, "-______-");
+            //Debug.Text = currentSentenceIndex + "";
+            Lueckentext.Text = currentSentence.Replace(BLK, "").Replace(currentSolution, "________");
 
-            Debug.Text = "DEV: " + currentSolution;
+            //Debug.Text = "DEV: " + currentSolution;
         }
 
         protected void ConfirmInput(object sender, ImageClickEventArgs e)
