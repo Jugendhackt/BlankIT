@@ -1,8 +1,9 @@
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
-
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -11,28 +12,21 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
-import org.xml.sax.InputSource;
+//***** THIS PROTOTYPE PROJECT IS CURRENTLY NOT IN USE AND MAY NOT BE USED UNTIL IT HAS BEEN COMPLETED *****//
+//***** THIS PROTOTYPE PROJECT IS CURRENTLY NOT IN USE AND MAY NOT BE USED UNTIL IT HAS BEEN COMPLETED *****//
+//***** THIS PROTOTYPE PROJECT IS CURRENTLY NOT IN USE AND MAY NOT BE USED UNTIL IT HAS BEEN COMPLETED *****//
+//***** THIS PROTOTYPE PROJECT IS CURRENTLY NOT IN USE AND MAY NOT BE USED UNTIL IT HAS BEEN COMPLETED *****//
 
-
-
-/**
- * Main logic class containing parsing algorithm
- */
 public class Main 
 {
 	public static final String API_prefix =
 		"https://de.wikipedia.org/w/api.php" +
 		"?format=xml&action=query&prop=extracts&exlimit=max&explaintext&titles=";
 	
-	/**
-	 * Programms main.
-	 *
-	 * @param  args  Arg0: Article name to search for
-	 * @return	Returns the article in plain text format
-	 */
 	public static void main(String[] args)
 	{
 		String wikiUrl = args[0];
@@ -42,12 +36,6 @@ public class Main
 		System.out.println(out);
 	}
 	
-	/**
-	 * Uses wiki api implementation to get a XML version of the articles content
-	 *
-	 * @param  article  Article name searched for
-	 * @return	Returns The XML document containing the article
-	 */
 	public static String getWikiXML(String article)
 	{
 		StringBuilder sb = new StringBuilder();
@@ -57,14 +45,6 @@ public class Main
 		return getText(sb.toString());
 	}
 
-
-
-	/**
-	 * Downloads 'nearly' any file using its URL
-	 *
-	 * @param  url  The url downloaded by the function
-	 * @return	Returns the files content
-	 */
     public static String getText(String url)
     {
         try {
@@ -87,14 +67,7 @@ public class Main
 		}
         return "";
     }
-
-
-	/**
-	 * Parses the XML-Formatted input to plain text output!
-	 *
-	 * @param  xml  A string conatining the XML-document.
-	 * @return	Returns the article in plain text format.
-	 */
+    
     public static String ParseText(String xml)
     {
     	try {
