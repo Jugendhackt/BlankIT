@@ -648,7 +648,8 @@ window.Modernizr = (function( window, document, undefined ) {
          * dev.w3.org/csswg/css3-images/#gradients-
          */
 
-        var str1 = 'background-image:',
+        var str1 = '
+        :',
             str2 = 'gradient(linear,left top,right bottom,from(#9f9),to(white));',
             str3 = 'linear-gradient(left top,#9f9, white);';
 

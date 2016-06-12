@@ -1,4 +1,4 @@
-﻿<%@ Page Title="BlankIT" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebUI.Default" %>
+﻿<%@ Page Title="BlankIT" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebUI.Default" ContentType="Static" %>
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
@@ -13,10 +13,11 @@
             <div class="viewer">
                 <p style="width: 100%">
                     <asp:Label ID="Lueckentext" runat="server" Text="" Width="100%"> </asp:Label><br />
-                    <asp:TextBox ID="Lueckenfüller" runat="server"></asp:TextBox>
-                    <asp:ImageButton ID="LueckenButton" runat="server" />
+                    <asp:TextBox ID="Lueckenfüller" runat="server" Width="188px"></asp:TextBox>
+                    <asp:ImageButton ID="LueckenButton" runat="server" Height="17px" OnClick="ConfirmInput" OnLoad="LueckenButton_Load" />
                 </p>
             </div>
+            <asp:TextBox ID="Debug" runat="server"></asp:TextBox>
         </div>
     <!--div class="row"-->
         <!--div class="col-md-4"/-->

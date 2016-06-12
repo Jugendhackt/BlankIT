@@ -12,87 +12,80 @@ namespace WebUI
 {
     public partial class Default : Page
     {
+        public const string BLK = "[@22]"; //Blank
+        public const string EOL = "[@23]"; //End of line
+        public const string EOF = "[@24]"; //End of file
+
+
         //Deklaration der Variablen
-        string pageContent = "";
-        HttpWebRequest req;
-        HttpWebResponse res;
-        
+        public List<string> sentences
+        {
+            get
+            {
+                return (List<string>) ViewState["sentences"];
+            }
+            set
+            {
+                ViewState["sentences"] = value;
+            }
+        }
+        public List<string> solutions
+        {
+            get
+            {
+                return (List<string>)ViewState["solutions"];
+            }
+            set
+            {
+                ViewState["solutions"] = value;
+            }
+        }
+        public int currentSentenceIndex
+        {
+            get
+            {
+                return (int)ViewState["currentSentenceIndex"];
+            }
+            set
+            {
+                ViewState["currentSentenceIndex"] = value;
+            }
+        }
+
+        public string currentSentence
+        { get { return sentences[currentSentenceIndex]; } }
+
+        public string currentSolution
+        { get { return solutions[currentSentenceIndex]; } }
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                       
+
         }
         protected void SearchButton_Click(object sender, EventArgs e)
         {
-            PostRequest(SearchBox.Text, 1);
-            pageContent=GetResponse();
-            PrintSentences();
-        }
-        protected void Lueckentext_Change(object sender, EventArgs e) {
+            //if (LueckenButton.Click == null)
+            //LueckenButton.Click += LueckenButton_Click;
+            string PageRet = AskData(SearchBox.Text, 1); //PageReteurn
 
+            InitQuest(PageRet);
+            putQuestAndIncrease();
+            Debug.Text = solutions.Count + "|" + sentences.Count;
         }
-        protected void LueckenButton_Click(object sender, EventArgs e) {
-            //TextBox txt = (TextBox)Parent.FindControl("Lueckentext");
-            //txt.Text.Insert(0, "Bla");
-        }
-        protected void PrintSentences()
+        protected void Lueckentext_Change(object sender, EventArgs e)
         {
-            string blanks = "[@22]";
-            string sentenceEnd = "[.]\\[@23\\]";
 
-            if (pageContent.Length >= 5)
-            {
-                SearchBox.Text = "";
-                pageContent = pageContent.Substring(0, pageContent.Length - 5);     //Entfernen der letzten Zeichen
-                string[] senten = Regex.Split(pageContent, sentenceEnd);
-                List<List<string>> sentences = new List<List<string>>();
-                foreach (string s in senten)
-                {
-                    Console.WriteLine(s);
-                    List<string> words = new List<string>();
-                    string[] wos = s.Split(' ');
-                    foreach (string w in wos)
-                    {
-                        words.Add(w);
-                    }
-                    sentences.Add(words);
-                }
-                sentences.RemoveAt(sentences.Count - 1);
-                for (int i = 0; i < sentences.Count; i++)
-                {
-                    //Lueckentext.Text += sentences.Count + " "+sentences[1].Count + " " + pageContent;
-                    if (sentences[i].Count > 2)
-                    {
-                        for (int j = 0; j < sentences[i].Count; j++)
-                        {
-                            if (sentences[i][j].Length >= 5 && sentences[i][j].Substring(0, 5) == blanks)
-                            {
-                                string realWo = sentences[i][j].Substring(5, sentences[i][j].Length - 5);
-                                Lueckentext.Text += "-";
-                                for (int k = 0; k < realWo.Length; k++)
-                                {
-                                    Lueckentext.Text += "_";
-                                }
-                                Lueckentext.Text += "- ";
-                            }
-                            else
-                            {
-                                Lueckentext.Text += sentences[i][j] + " ";
-                            }
-                        }
-                        Lueckentext.Text += ".<br/>";
-                    }
-                }
-            }
         }
-        protected void PostRequest(string Text, int Quatschfaktor) {
+        protected string AskData(string Text, int Quatschfaktor)
+        {
             /* 
              * Senden eines HTTP POST REQUEST mittels HttpWebRequest zu einer Adresse (url).
              */
 
             string url = "http://192.168.173.28/index.php";
-            string fq = "2";
-            req = (HttpWebRequest)WebRequest.Create(url);
+            string fq = "1";
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
             req.Method = "POST";
             string Data = "text" + "=" + Text + "&fq=" + fq; //SearchBox.Text
             byte[] postBytes = Encoding.ASCII.GetBytes(Data);
@@ -100,21 +93,69 @@ namespace WebUI
             req.ContentLength = Data.Length;
             Stream requestStream = req.GetRequestStream();
             requestStream.Write(postBytes, 0, postBytes.Length);
-            requestStream.Close();
-        }
-        protected string GetResponse() {
-            /*
-             * Empfangen eines HTTP GET RESPONSE mittels HttpWebResponse von einer anderen Adresse
-             */
-            res = (HttpWebResponse)req.GetResponse();
+
+            HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+
             Stream responseStream = res.GetResponseStream();
             StreamReader myStreamReader = new StreamReader(responseStream, Encoding.Default);
-            string t = myStreamReader.ReadToEnd();
+
+            string ret = myStreamReader.ReadToEnd();
+
             myStreamReader.Close();
             responseStream.Close();
+            requestStream.Close();
             res.Close();
-            ClientScript.RegisterStartupScript(GetType(), "alert", t, true);
-            return t;
+
+            ret.Replace( EOF, "");
+
+            //Debug.Text = ret;
+            return ret;
         }
-    }   
+
+        protected void InitQuest(string PageRet)
+        {
+            sentences = new List<string>(PageRet.Split(new string[] { EOL }, StringSplitOptions.None));
+            sentences.RemoveAt(sentences.Count - 1);
+            
+            List<string> words = new List<string>(PageRet.Split(new string[] { " " }, StringSplitOptions.None));
+
+            //for (int i = 0; i < words.Count; i++)
+            //    Debug.text += sentences[i];
+
+            solutions = new List<string>();
+
+            for (int i = 0; i < words.Count; i++)
+                if (words[i].Contains(BLK))
+                {
+                    solutions.Add(words[i].Replace(BLK, ""));
+                }
+
+            currentSentenceIndex = -1;
+            //for (int i = 0; i < sentences.Count; i++)
+            //    Debug.Text += sentences[i];
+            //Debug.Text += "  KEYS:";
+            //for (int i = 0; i < solutions.Count; i++)
+            //    Debug.Text += solutions[i];
+        }
+        protected void putQuestAndIncrease()
+        {
+            currentSentenceIndex++;
+            if (currentSentenceIndex == solutions.Count)
+                Response.Redirect("~/Success.aspx");
+            Debug.Text = currentSentenceIndex + "";
+            Lueckentext.Text = currentSentence.Replace(BLK, "").Replace(currentSolution, "-______-");
+
+            Debug.Text = "DEV: " + currentSolution;
+        }
+
+        protected void ConfirmInput(object sender, ImageClickEventArgs e)
+        {
+            if (Lueckenfüller.Text == currentSolution) putQuestAndIncrease();
+        }
+
+        protected void LueckenButton_Load(object sender, EventArgs e)
+        {
+            this.LueckenButton.Click += this.ConfirmInput;
+        }
+    }
 }
