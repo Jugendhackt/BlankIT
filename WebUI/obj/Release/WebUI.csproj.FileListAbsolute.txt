@@ -183,3 +183,191 @@ C:\Users\jan\Documents\Visual Studio 2015\Projects\BlankIT\WebUI\bin\de\Microsof
 C:\Users\jan\Documents\Visual Studio 2015\Projects\BlankIT\WebUI\obj\Release\WebUI.csprojResolveAssemblyReference.cache
 C:\Users\jan\Documents\Visual Studio 2015\Projects\BlankIT\WebUI\obj\Release\Web-UI.dll
 C:\Users\jan\Documents\Visual Studio 2015\Projects\BlankIT\WebUI\obj\Release\Web-UI.pdb
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\ApplicationInsights.config
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\csc.exe
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\vbc.exe
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\VBCSCompiler.exe
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Web-UI.dll.config
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Web-UI.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Web-UI.pdb
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Antlr3.Runtime.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\EntityFramework.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AI.Web.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Newtonsoft.Json.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Owin.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\System.Web.Optimization.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\System.Web.Providers.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\WebGrease.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AI.Web.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\System.Web.Optimization.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Antlr3.Runtime.pdb
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Newtonsoft.Json.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\EntityFramework.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\EntityFramework.SqlServer.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\System.Web.Providers.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\System.Web.Optimization.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\EntityFramework.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\EntityFramework.SqlServer.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.Owin.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.Owin.Security.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\bin\de\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\obj\Release\WebUI.csprojResolveAssemblyReference.cache
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\obj\Release\Web-UI.dll
+C:\Users\jan\Documents\Visual Studio 2015\Projects\autoquiz\WebUI\obj\Release\Web-UI.pdb
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\ApplicationInsights.config
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\csc.exe
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\System.Collections.Immutable.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\vbc.exe
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\VBCSCompiler.exe
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\roslyn\VBCSCompiler.exe.config
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Web-UI.dll.config
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Web-UI.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Web-UI.pdb
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Antlr3.Runtime.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\AspNet.ScriptManager.bootstrap.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\AspNet.ScriptManager.jQuery.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\EntityFramework.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\EntityFramework.SqlServer.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AI.DependencyCollector.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AI.Web.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AI.WindowsServer.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.ApplicationInsights.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.Google.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.ScriptManager.WebForms.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Web.Infrastructure.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Newtonsoft.Json.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Owin.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\System.Web.Optimization.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\System.Web.Providers.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\WebGrease.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AI.DependencyCollector.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AI.Web.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AI.WindowsServer.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.ApplicationInsights.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\System.Web.Optimization.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Antlr3.Runtime.pdb
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Newtonsoft.Json.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\EntityFramework.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\EntityFramework.SqlServer.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\System.Web.Providers.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.Google.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\System.Web.Optimization.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.AspNet.FriendlyUrls.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\EntityFramework.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\EntityFramework.SqlServer.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.Owin.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.Owin.Security.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.Owin.Security.Google.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\bin\de\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\obj\Release\WebUI.csprojAssemblyReference.cache
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\obj\Release\WebUI.csproj.CoreCompileInputs.cache
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\obj\Release\WebUI.csproj.CopyComplete
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\obj\Release\Web-UI.dll
+D:\Dokumente\Projekte\JDPDO.BlankIT\autoquiz\WebUI\obj\Release\Web-UI.pdb
