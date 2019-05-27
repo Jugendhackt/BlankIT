@@ -8,7 +8,7 @@
             </p>
             <p class="lead">
                 <asp:TextBox ID="SearchBox" runat="server" Width="90%" Height="92pt" TextMode="MultiLine"/>
-                <asp:ImageButton ID="SearchButton" runat="server" ImageUrl="~/images/search.svg" Height="15pt" OnClick="SearchButton_Click"/>
+                <asp:ImageButton ID="SearchButton" runat="server" ImageUrl="~/images/search.svg" Height="88pt" OnClick="SearchButton_Click" Width="75px"/>
             </p>
             <div class="viewer">
                 <p style="width: 100%">
